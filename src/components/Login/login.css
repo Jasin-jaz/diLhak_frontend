@@ -393,3 +393,24 @@
     background-color: whitesmoke;
   }
 }
+
+@media (max-width: 800px) {
+  .login_center{
+    margin-left: -80px;
+  }
+}
+@media (max-width: 560px) {
+  .login_center{
+    margin-left: -90px;
+  }
+}
+@media (max-width: 414px) {
+  .login_center{
+    margin-left: -125px;
+  }
+}
+@media (max-width: 375px) {
+  .login_center{
+    margin-left: -135px;
+  }
+}
