@@ -57,6 +57,7 @@ import PAAddDiscount from "./pages/ProductAdmin/Product/PAAddDiscount";
 import PAViewDiscount from "./pages/ProductAdmin/Product/PAViewDiscount";
 import PAUpdateDiscount from "./pages/ProductAdmin/Product/PAUpdateDiscount";
 import PACategory from "./pages/ProductAdmin/Product/PACategory";
+import PASubCategory from "./pages/ProductAdmin/Product/PASubCategory";
 import PAProduct from "./pages/ProductAdmin/Product/PAProduct";
 import PAAddProduct from "./pages/ProductAdmin/Product/PAAddProduct";
 import PAViewProduct from "./pages/ProductAdmin/Product/PAViewProduct";
@@ -138,7 +139,8 @@ function App() {
           <Route path="/productadmin-add-discount" element={<><ProductSideNav/><PAAddDiscount/><Search /><Footer /></>}/>
           <Route path="/productadmin-view-discount" element={<><ProductSideNav/><PAViewDiscount/><Search /><Footer /></>}/>
           <Route path="/productadmin-update-discount" element={<><ProductSideNav/><PAUpdateDiscount/><Search /><Footer /></>}/>
-          <Route path="/productadmin-category" element={<><ProductSideNav/><PACategory/><Search /><Footer /></>}/>         
+          <Route path="/productadmin-category" element={<><ProductSideNav/><PACategory/><Search /><Footer /></>}/>  
+          <Route path="/productadmin-subcategory" element={<><ProductSideNav/><PASubCategory/><Search /><Footer /></>}/>         
           <Route path="/productadmin-products" element={<><ProductSideNav/><PAProduct/><Search /><Footer /></>}/>
           <Route path="/productadmin-add-products" element={<><ProductSideNav/><PAAddProduct/><Search /><Footer /></>}/>
           <Route path="/productadmin-view-products" element={<><ProductSideNav/><PAViewProduct/><Search /><Footer /></>}/>
@@ -148,8 +150,8 @@ function App() {
 
         {/* ---------------------------------ORDER-ADMIN------------------------- */}
           <Route path="/orderadmin-dashboard" element={<><OrderSideNav/> <OrderAdminDashboard/><Search /><Footer /></>} />
-          <Route path="/orderadmin-view" element={<><OrderSideNav/> <OrderAdminProfileView/><Search /><Footer /></>} />
-          <Route path="/orderadmin-update" element={<><OrderSideNav/> <OrderAdminProfileUpdate/><Search /><Footer /></>} />
+          <Route path="/orderadmin-profileview" element={<><OrderSideNav/> <OrderAdminProfileView/><Search /><Footer /></>} />
+          <Route path="/orderadmin-profileupdate" element={<><OrderSideNav/> <OrderAdminProfileUpdate/><Search /><Footer /></>} />
           <Route path="/orderadmin-order" element={<><OrderSideNav/> <OrderAdminOrder/><Search /><Footer /></>} />
           <Route path="/orderadmin-view-order" element={<><OrderSideNav/> <OrderAdminViewOrder/><Search /><Footer /></>} />                                                                                                                   
           <Route path="/orderadmin-shipping" element={<><OrderSideNav/> <OrderAdminShipping/><Search /><Footer /></>} />

@@ -13,9 +13,9 @@ function PAViewDiscount() {
                 <div className="w-auto sw-md-40">
                   <a href="/productadmin-discount" className="muted-link pb-1 d-inline-block breadcrumb-back">
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
-                    <span className="text-small align-middle">Back</span>
+                    <span className="text-medium align-middle">Back</span>
                   </a>
-                  <h1 className="mb-0 pb-0 display-4" id="title">Discount Details</h1>
+                  <h1 className="mb-0 pb-0 display-4" id="title">Combo Offer Details</h1>
                 </div>
               </div>
               {/* <!-- Title End --> */}
@@ -25,14 +25,14 @@ function PAViewDiscount() {
 
           <div className="row">
             <div className="col-xl-8">
-              {/* <!-- Discount Info Start --> */}
+              {/* <!-- Combo offers Info Start --> */}
               <div className="mb-5">
-                <h2 className="small-title">Discount info</h2>
+                <h2 className="small-title">Combo offers Info</h2>
                 <div className="card">
                   <div className="card-body">
                     <form>
                       <div className="mb-3">
-                        <label className="form-label">CODE</label>
+                        <label className="form-label">NAME</label>
                         <input type="text" className="form-control" value="221" readOnly/>
                       </div>
                       <div className="mb-3 w-100">
@@ -69,7 +69,7 @@ function PAViewDiscount() {
                   </div>
                 </div>
               </div>
-              {/* <!-- Disocunt Info End --> */}
+              {/* <!-- Combo offers Info End --> */}
             </div>
 
             <div className="col-xl-4 mb-n5">

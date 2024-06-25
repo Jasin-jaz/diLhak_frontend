@@ -3,7 +3,7 @@ import React from 'react'
 function OrderAdminShipping() {
   return (
     <div>
-      <main>
+        <main>
         <div className="container">
           {/* <!-- Title and Top Buttons Start --> */}
           <div className="page-title-container">
@@ -15,7 +15,7 @@ function OrderAdminShipping() {
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
                     <span className="text-small align-middle">Home</span>
                   </a>
-                  <h1 className="mb-0 pb-0 display-4" id="title">Shipping(OA)</h1>
+                  <h1 className="mb-0 pb-0 display-4" id="title">Shipping</h1>
                 </div>
               </div>
               {/* <!-- Title End --> */}

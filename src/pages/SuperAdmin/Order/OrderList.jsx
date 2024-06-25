@@ -13,7 +13,7 @@ function OrderList() {
                 <div className="w-auto sw-md-30">
                   <a href="/admin-dashboard" className="muted-link pb-1 d-inline-block breadcrumb-back">
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
-                    <span className="text-small align-middle">Home</span>
+                    <span className="text-medium align-middle">Home</span>
                   </a>
                   <h1 className="mb-0 pb-0 display-4" id="title">Order List</h1>
                 </div>
@@ -113,11 +113,11 @@ function OrderList() {
               <div className="card mb-2 bg-transparent no-shadow d-none d-md-block">
                 <div className="card-body pt-0 pb-0 sh-3">
                   <div className="row g-0 h-100 align-content-center">
-                    <div className="col-md-2 d-flex align-items-center mb-2 mb-md-0 text-muted text-small">ID</div>
-                    <div className="col-md-3 d-flex align-items-center text-muted text-small">NAME</div>
-                    <div className="col-md-2 d-flex align-items-center text-muted text-small">PRICE</div>
-                    <div className="col-md-2 d-flex align-items-center text-muted text-small">DATE</div>
-                    <div className="col-md-2 d-flex align-items-center text-muted text-small">STATUS</div>
+                    <div className="col-md-2 d-flex align-items-center mb-2 mb-md-0 text-muted text-medium">ID</div>
+                    <div className="col-md-3 d-flex align-items-center text-muted text-medium">NAME</div>
+                    <div className="col-md-2 d-flex align-items-center text-muted text-medium">PRICE</div>
+                    <div className="col-md-2 d-flex align-items-center text-muted text-medium">DATE</div>
+                    <div className="col-md-2 d-flex align-items-center text-muted text-medium">STATUS</div>
                   </div>
                 </div>
               </div>
@@ -152,11 +152,6 @@ function OrderList() {
                           <span className="badge rounded-pill bg-outline-primary">CONFIRMED</span>
                         </div>
                       </div>
-                      <div className="col-1 col-md-1 d-flex flex-column justify-content-center align-items-md-end mb-2 mb-md-0 order-2 text-end order-md-last">
-                        <label className="form-check float-end pe-none mt-1">
-                          <input type="checkbox" className="form-check-input" />
-                        </label>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -190,11 +185,6 @@ function OrderList() {
                           <span className="badge rounded-pill bg-outline-primary">CONFIRMED</span>
                         </div>
                       </div>
-                      <div className="col-1 col-md-1 d-flex flex-column justify-content-center align-items-md-end mb-2 mb-md-0 order-2 text-end order-md-last">
-                        <label className="form-check float-end pe-none mt-1">
-                          <input type="checkbox" className="form-check-input" />
-                        </label>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -228,11 +218,6 @@ function OrderList() {
                           <span className="badge rounded-pill bg-outline-primary">CONFIRMED</span>
                         </div>
                       </div>
-                      <div className="col-1 col-md-1 d-flex flex-column justify-content-center align-items-md-end mb-2 mb-md-0 order-2 text-end order-md-last">
-                        <label className="form-check float-end pe-none mt-1">
-                          <input type="checkbox" className="form-check-input" />
-                        </label>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -265,11 +250,6 @@ function OrderList() {
                         <div className="text-alternate">
                           <span className="badge rounded-pill bg-outline-primary">CONFIRMED</span>
                         </div>
-                      </div>
-                      <div className="col-1 col-md-1 d-flex flex-column justify-content-center align-items-md-end mb-2 mb-md-0 order-2 text-end order-md-last">
-                        <label className="form-check float-end pe-none mt-1">
-                          <input type="checkbox" className="form-check-input" />
-                        </label>
                       </div>
                     </div>
                   </div>

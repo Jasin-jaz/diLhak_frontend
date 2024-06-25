@@ -1,6 +1,102 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 function PAAddProduct() {
+  const [attributes, setAttributes] = useState([
+    {
+      id: 1,
+      size: "",
+      price: "",
+      actualPrice: "",
+      discountPrice: "", 
+      stock: "",
+      sku: "",
+      gallery: ""
+    }
+  ]);
+
+  const [variantImages, setVariantImages] = useState([
+    [null, null, null, null]  // Initial state for images of each variant
+  ]);
+
+  const addAttribute = () => {
+    const newAttribute = {
+      id: attributes.length + 1,
+      size: "",
+      price: "",
+      actualPrice: "",
+      discountPrice: "",
+      stock: "",
+      sku: "",
+      gallery: ""
+    };
+    setAttributes([...attributes, newAttribute]);
+
+    // Add a new array for images for the new variant
+    setVariantImages([...variantImages, [null, null, null, null]]);
+  };
+
+  const deleteAttribute = (id) => {
+    setAttributes(attributes.filter(attribute => attribute.id !== id));
+    setVariantImages(variantImages.filter((_, index) => index !== (id - 1))); // Remove images for deleted variant
+  };
+
+  const handleInputChange = (id, field, value) => {
+    const updatedAttributes = attributes.map(attribute => {
+      if (attribute.id === id) {
+        return { ...attribute, [field]: value };
+      }
+      return attribute;
+    });
+    setAttributes(updatedAttributes);
+  };
+
+  const handleFileDrop = (e, variantIndex, boxIndex) => {
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      const newVariantImages = [...variantImages];
+      newVariantImages[variantIndex][boxIndex] = {
+        url: reader.result,
+        name: file.name,
+        file: file
+      };
+      setVariantImages(newVariantImages);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleFileInputChange = (e, variantIndex, boxIndex) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      const newVariantImages = [...variantImages];
+      newVariantImages[variantIndex][boxIndex] = {
+        url: reader.result,
+        name: file.name,
+        file: file
+      };
+      setVariantImages(newVariantImages);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleDelete = (variantIndex, boxIndex) => {
+    const newVariantImages = [...variantImages];
+    newVariantImages[variantIndex][boxIndex] = null;
+    setVariantImages(newVariantImages);
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+  };
+
+  const openFileInput = (variantIndex, boxIndex) => {
+    document.getElementById(`file-input-${variantIndex}-${boxIndex}`).click();
+  };
+
+
   return (
     <div>
        <main>
@@ -15,18 +111,18 @@ function PAAddProduct() {
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
                     <span className="text-small align-middle">Back</span>
                   </a>
-                  <h1 className="mb-0 pb-0 display-4" id="title">Product Details Add</h1>
+                  <h1 className="mb-0 pb-0 display-4" id="title">Add New Product</h1>
                 </div>
               </div>
               {/* <!-- Title End --> */}
 
               {/* <!-- Top Buttons Start --> */}
              <div className="w-100 d-md-none"></div>
-              <div className="col-12 col-sm-6 col-md-auto d-flex align-items-end justify-content-end mb-2 mb-sm-0 order-sm-3">
+              <div className="col-12 col-sm-6 d-flex align-items-end justify-content-end mb-2 mb-sm-0 order-sm-3">
                 <a href="#" className="btn btn-outline-primary btn-icon btn-icon-start ms-0 ms-sm-1 w-100 w-md-auto">
                   <span>Submit</span>
                 </a>
-                <div className="dropdown d-inline-block d-lg-none">
+                {/* <div className="dropdown d-inline-block d-lg-none">
                   <button
                     type="button"
                     className="btn btn-outline-primary btn-icon btn-icon-only ms-1"
@@ -37,7 +133,7 @@ function PAAddProduct() {
                   >
                     <i data-acorn-icon="sort"></i>
                   </button>
-                </div>
+                </div> */}
               </div>
               {/* <!-- Top Buttons End --> */}
             </div>
@@ -48,27 +144,17 @@ function PAAddProduct() {
             <div className="col-xl-8">
               {/* <!-- Product Info Start --> */}
               <div className="mb-5">
-                <h2 className="small-title">Product info</h2>
+                <h2 className="small-title">Description</h2>
                 <div className="card">
                   <div className="card-body">
                     <form>
                       <div className="mb-3">
-                        <label className="form-label">Title</label>
+                        <label className="form-label">Product Name</label>
                         <input type="text" className="form-control"/>
                       </div>
-                      <div className="mb-3 w-100">
-                        <label className="form-label">Category</label>
-                        <select className="form-select select-single-no-search">
-                          <option label="--Category--"></option>
-                          <option value="Breadstick">SALWAR</option>
-                          <option value="Biscotti">SAREE</option>
-                          <option value="Fougasse">TOP</option>
-                        </select>
-                      </div>
                       <div className="mb-3">
-                        <label className="form-label">Description</label>
+                        <label className="form-label">Product Description</label>
                         <textarea className="form-control html-editor-bubble html-editor sh-13" id="quillEditorBubble" style={{overflowY: 'scroll',padding:'10px 10px' }}>
-                          
                         </textarea>
                       </div>
                     </form>
@@ -77,227 +163,170 @@ function PAAddProduct() {
               </div>
               {/* <!-- Product Info End --> */}
 
-              {/* <!-- Inventory Start --> */}
+              {/* <!-- Product Info Start --> */}
               <div className="mb-5">
-                <h2 className="small-title">Inventory</h2>
+                <h2 className="small-title">Category</h2>
                 <div className="card">
                   <div className="card-body">
                     <form>
-                      <div className="mb-3">
-                        <label className="form-label">SKU</label>
-                        <input type="text" className="form-control"/>
+                      <div className="mb-3 w-100">
+                        <label className="form-label">Product Category</label>
+                        <select className="form-select select-single-no-search">
+                          <option label="--Category--"></option>
+                          <option value="Breadstick">SALWAR</option>
+                          <option value="Biscotti">SAREE</option>
+                          <option value="Fougasse">TOP</option>
+                        </select>
                       </div>
-                      <div className="mb-3">
-                        <label className="form-label">Barcode</label>
-                        <input type="text" className="form-control"/>
-                      </div>
-                      <div className="mb-3">
-                        <label className="form-label">Quantity</label>
-                        <input type="text" className="form-control"/>
-                      </div>
-                      <div className="mb-0">
-                        <label className="form-label">Settings</label>
-                        <div className="form-check form-switch mb-1">
-                          <input type="checkbox" className="form-check-input" id="quantitySwitch1" />
-                          <label className="form-check-label" for="quantitySwitch1">Allow out of stock purchase</label>
-                        </div>
-                        <div className="form-check form-switch mb-1">
-                          <input type="checkbox" className="form-check-input" id="quantitySwitch2"/>
-                          <label className="form-check-label" for="quantitySwitch2">Notify low stock</label>
-                        </div>
-                        <div className="form-check form-switch">
-                          <input type="checkbox" className="form-check-input" id="quantitySwitch3" />
-                          <label className="form-check-label" for="quantitySwitch3">Display quantity at storefront</label>
-                        </div>
+                      <div className="mb-3 w-100">
+                        <label className="form-label">Product SubCategory</label>
+                        <select className="form-select select-single-no-search">
+                          <option label="--Category--"></option>
+                          <option value="Breadstick">PLAZZO SALWAR</option>
+                          <option value="Biscotti">KANCHIPURAM SAREE</option>
+                          <option value="Fougasse">DENIM TOP</option>
+                        </select>
                       </div>
                     </form>
                   </div>
                 </div>
               </div>
-              {/* <!-- Inventory End --> */}
-
-              {/* <!-- Shipping Start --> */}
-              {/* <div className="mb-5">
-                <div className="d-flex justify-content-between">
-                  <h2 className="small-title">Shipping</h2>
-                  <button className="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
-                    <span className="align-bottom">Edit Shipping Methods</span>
-                    <i data-acorn-icon="chevron-right" className="align-middle" data-acorn-size="12"></i>
-                  </button>
-                </div>
-                <div className="card">
-                  <div className="card-body">
-                    <form className="mb-n1">
-                      <label className="form-check w-100 mb-1">
-                        <input type="checkbox" className="form-check-input"/>
-                        <span className="form-check-label d-block">
-                          <span className="mb-1 lh-1-25">Standard Shipping</span>
-                          <span className="text-muted d-block text-small mt-0">(Price Based Rate)</span>
-                        </span>
-                      </label>
-                      <label className="form-check w-100 mb-1">
-                        <input type="checkbox" className="form-check-input"/>
-                        <span className="form-check-label d-block">
-                          <span className="mb-1 lh-1-25">Express Shipping</span>
-                          <span className="text-muted d-block text-small mt-0">(Price Based Rate)</span>
-                        </span>
-                      </label>
-                      <label className="form-check w-100 mb-1">
-                        <input type="checkbox" className="form-check-input"/>
-                        <span className="form-check-label d-block">
-                          <span className="mb-1 lh-1-25">Priority Shipping</span>
-                          <span className="text-muted d-block text-small mt-0">(Price Based Rate)</span>
-                        </span>
-                      </label>
-                    </form>
+              {/* <!-- Product Info End --> */}
+            </div>
+            <div className="col-xl-4 mb-n5"></div>
+          </div>
+          {attributes.map((attribute, index) => (
+          <div className="row">
+          <div className="col-xl-8">
+            {/* <!-- Attributes Start --> */}
+            <div className="mb-5">
+                <div className='row mt-4' >
+                <h2 className=" col-4 small-title mt-2">Product Variant {attribute.id}</h2>
+                <div className="col-8 ">
+                    <button className="btn btn-icon btn-icon-only btn-outline-primary" style={{marginLeft:"90%"}} type="button" onClick={() => deleteAttribute(attribute.id)}>
+                      <i className='fa-solid fa-trash'></i>
+                    </button>
+                    </div>
                   </div>
-                </div>
-              </div> */}
-              {/* <!-- Shipping End --> */}
-
-              {/* <!-- Attributes Start --> */}
-              <div className="mb-5">
-                <h2 className="small-title">Attributes</h2>
-                <div className="card">
+                <div className="card mb-5 mt-3">
                   <div className="card-body">
-                    <div className="mb-n6 border-last-none">
-                      <div className="mb-3 pb-3 border-bottom border-separator-light">
+                      <div key={attribute.id} className="mb-3 pb-3">
                         <div className="row gx-2">
-                          <div className="col col-md-auto order-1">
+                          <div className="col ">
                             <div className="mb-3">
-                            <label className="form-label">Size</label>
-                                <select className="form-select select-single-no-search">
-                                    <option label="--size--"></option>
-                                    <option value="S">S</option>
-                                    <option value="M">M</option>
-                                    <option value="L">L</option>
-                                    <option value="XL">XL</option>
-                                    <option value="XXL">XXL</option>
-                                    <option value="XXXL">XXL</option>
-                                </select>
+                              <label className="form-label">Size</label>
+                              <select className="form-select" value={attribute.size} onChange={(e) => handleInputChange(attribute.id, "size", e.target.value)}>
+                                <option label="--size--"></option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                                <option value="XXXL">XXXL</option>
+                              </select>
                             </div>
                           </div>
-                          <div className="col-md order-3">
-                            <div className="mb-0">
-                              <label className="form-label">Price</label>
-                              <input className="form-control" name="tagsBasic"/>
+                          <div className="">
+                            <div className="mb-3">
+                              <label className="form-label">Colour</label>
+                              <div>
+                                <input type="text" className="form-control"/>
+                              </div>
                             </div>
                           </div>
-                          <div className="col-md order-3">
-                            <div className="mb-0">
+                          <div className="">
+                            <div className="mb-3">
                               <label className="form-label">Actual Price</label>
-                              <input className="form-control" name="tagsBasic"/>
+                              <input type="text" className="form-control" value={attribute.actualPrice} onChange={(e) => handleInputChange(attribute.id, "actualPrice", e.target.value)} />
                             </div>
                           </div>
-                          <div className="col-md order-3">
-                            <div className="mb-0">
+                          <div className="">
+                            <div className="mb-3">
                               <label className="form-label">Discount Price</label>
-                              <input className="form-control" name="tagsBasic"/>
+                              <input type="text" className="form-control" value={attribute.discountPrice} onChange={(e) => handleInputChange(attribute.id, "discountPrice", e.target.value)} />
                             </div>
                           </div>
-                          <div className="col-auto order-2 order-md-4">
-                            <label className="d-block form-label">&nbsp;</label>
-                            <button className="btn btn-icon btn-icon-only btn-outline-primary" type="button">
-                              <i className='fa-solid fa-trash'/>
-                            </button>
+                          <div className="">
+                            <div className="mb-3">
+                              <label className="form-label">Stock</label>
+                              <input type="text" className="form-control" value={attribute.stock} onChange={(e) => handleInputChange(attribute.id, "discountPrice", e.target.value)} />
+                            </div>
+                          </div>
+                          <div className="">
+                            <div className="mb-3">
+                              <label className="form-label">SKU (optional)</label>
+                              <input type="text" className="form-control" value={attribute.sku} onChange={(e) => handleInputChange(attribute.id, "discountPrice", e.target.value)} />
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div className="mb-3 pb-3 border-bottom text-center">
-                        <button type="button" className="btn btn-foreground hover-outline btn-icon btn-icon-start mt-2">
-                          <i data-acorn-icon="plus"></i>
-                          <span>Add New</span>
-                        </button>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
               {/* <!-- Attributes End --> */}
-            </div>
-
-            <div className="col-xl-4 mb-n5">
-              {/* <!-- Price Start --> */}
-              {/* <div className="mb-5">
-                <h2 className="small-title">Price</h2>
-                <div className="card">
-                  <div className="card-body">
-                    <form>
-                      <div className="mb-3">
-                        <label className="form-label">Market Price</label>
-                        <input type="text" className="form-control mask-currency"/>
-                      </div>
-                      <div className="mb-0">
-                        <label className="form-label">Discount Price</label>
-                        <input type="text" className="form-control mask-currency"/>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div> */}
-              {/* <!-- Price End --> */}
-
-              {/* <!-- Image Start --> */}
-              <div className="mb-5">
-                <h2 className="small-title">Image</h2>
-                <div className="card">
-                  <div className="card-body">
-                    <form>
-                      <div className="dropzone dropzone-columns row g-2 row-cols-1 row-cols-md-1 border-0 p-0" id="dropzoneProductImage"></div>
-                    </form>
-                  </div>
-                </div>
+          </div>
+          <div className="col-xl-4 mb-4 mt-7">
+          <div className="card mt-5">
+            <div className="card-body">
+              <div className="row">
+              {[0, 1, 2, 3].map((boxIndex) => (
+                    <div key={boxIndex} className="col-md-6">
+                      <form>
+                        <div>
+                          {!variantImages[index][boxIndex] && (
+                            <div
+                            style={{cursor:"pointer"}}
+                              className="dropzone mb-5"
+                              onClick={() => openFileInput(index, boxIndex)}
+                              onDrop={(e) => handleFileDrop(e, index, boxIndex)}
+                              onDragOver={handleDragOver}
+                            >
+                              <input
+                                id={`file-input-${index}-${boxIndex}`}
+                                type="file"
+                                className="form-control d-none"
+                                onChange={(e) => handleFileInputChange(e, index, boxIndex)}
+                              />
+                              <i className="fa-solid fa-upload text-primary mt-3" style={{ marginLeft:"-7px"}}></i>
+                              <label className='form-label ms-1 mt-3'  style={{cursor:"pointer"}} onMouseOver={(e)=> e.target.style.color = 'var(--primary)'} onMouseOut={(e)=> e.target.style.color = ''}>Upload Image</label>
+                            </div>
+                          )}
+                          {variantImages[index][boxIndex] && (
+                            <div className="mt-3" style={{ position: 'relative' }}>
+                              <div style={{ position: 'relative', maxWidth: '100%', maxHeight: '100%', overflow: 'hidden' }}>
+                                <img
+                                  src={variantImages[index][boxIndex].url}
+                                  className="mb-3"
+                                  alt={variantImages[index][boxIndex].name}
+                                  style={{ width: '100%', height: 'auto' }}
+                                />
+                                <button
+                                  type="button"
+                                  className="btn btn-outline-danger"
+                                  onClick={() => handleDelete(index, boxIndex)}
+                                  style={{ position: 'absolute', bottom: '15px', right: '0px' }}
+                                >
+                                  <i className="fa-solid fa-trash" />
+                                </button>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </form>
+                    </div>
+                  ))}
               </div>
-              {/* <!-- Image End --> */}
-
-              {/* <!-- History Start --> */}
-              <div className="mb-5">
-                <h2 className="small-title">History</h2>
-                <div className="card">
-                  <div className="card-body mb-n3">
-                    <div className="mb-3">
-                      <div className="text-small text-muted">STATUS</div>
-                      <div>Published</div>
-                    </div>
-                    <div className="mb-3">
-                      <div className="text-small text-muted">CREATED BY</div>
-                      <div>Vyshnav Venu</div>
-                    </div>
-                    <div className="mb-3">
-                      <div className="text-small text-muted">CREATE DATE</div>
-                      <div>12.05.2021 - 13:42</div>
-                    </div>
-                    <div className="mb-3">
-                      <div className="text-small text-muted">URL</div>
-                      <div>dilhak.com</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* <!-- History End --> */}
-
-              
-
-              {/* <!-- Gallery Start --> */}
-              <div className="mb-5">
-                <h2 className="small-title">Gallery</h2>
-                <div className="card">
-                  <div className="card-body">
-                    <form className="mb-3">
-                      <div className="dropzone dropzone-columns row g-2 row-cols-1 row-cols-md-4 row-cols-xl-2 border-0 p-0" id="dropzoneProductGallery"></div>
-                    </form>
-                    <div className="text-center">
-                      <button type="button" className="btn btn-foreground hover-outline btn-icon btn-icon-start mt-2" id="dropzoneProductGalleryButton">
-                        <i data-acorn-icon="plus"></i>
-                        <span>Add Files</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* <!-- Gallery End --> */}
             </div>
           </div>
+        </div>
+        </div>
+        ))}
+        </div>
+        <div className="mb-3 pb-3 text-center mt-3">
+          <button type="button" className="btn btn-outline-primary btn-icon btn-icon-start ms-0 ms-sm-1 w-100 w-md-auto" onClick={addAttribute}>
+              <i data-acorn-icon="plus"></i>
+              <span>Add Variant</span>
+          </button>
         </div>
       </main>
     </div>

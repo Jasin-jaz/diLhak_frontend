@@ -1,6 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 function PAUpdateDiscount() {
+
+  const [editImage, setEditImage] = useState(null);
+  const handleEditFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        setEditImage({
+          file: file, // Store the file object itself
+          url: e.target.result,
+          name: file.name,
+          size: file.size
+        });
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setEditImage(null);
+    }
+  };
+
+  const handleEditDelete = () => {
+    setEditImage(null);
+  };
+
   return (
     <div>
       <main>
@@ -13,9 +37,9 @@ function PAUpdateDiscount() {
                 <div className="w-auto sw-md-40">
                   <a href="/productadmin-discount" className="muted-link pb-1 d-inline-block breadcrumb-back">
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
-                    <span className="text-small align-middle">Back</span>
+                    <span className="text-medium align-middle">Back</span>
                   </a>
-                  <h1 className="mb-0 pb-0 display-4" id="title">Discount Details</h1>
+                  <h1 className="mb-0 pb-0 display-4" id="title">Combo Offer Details</h1>
                 </div>
               </div>
               {/* <!-- Title End --> */}
@@ -45,14 +69,14 @@ function PAUpdateDiscount() {
 
           <div className="row">
             <div className="col-xl-8">
-              {/* <!-- Discount Info Start --> */}
+              {/* <!-- Combo offers Info Start --> */}
               <div className="mb-5">
-                <h2 className="small-title">Discount info</h2>
+                <h2 className="small-title">Combo offers info</h2>
                 <div className="card">
                   <div className="card-body">
                     <form>
                       <div className="mb-3">
-                        <label className="form-label">CODE</label>
+                        <label className="form-label">NAME</label>
                         <input type="text" className="form-control"/>
                       </div>
                       <div className="mb-3 w-100">
@@ -89,7 +113,7 @@ function PAUpdateDiscount() {
                   </div>
                 </div>
               </div>
-              {/* <!-- Disocunt Info End --> */}
+              {/* <!-- Combo offers Info End --> */}
             </div>
 
             <div className="col-xl-4 mb-n5">
@@ -125,8 +149,20 @@ function PAUpdateDiscount() {
                 <h2 className="small-title">Image</h2>
                 <div className="card">
                   <div className="card-body">
-                    <form>
-                      <div className="dropzone dropzone-columns row g-2 row-cols-1 row-cols-md-1 border-0 p-0" id="dropzoneProductImage"></div>
+                  <form>
+                      {editImage && editImage.url ? (
+                        <div className="mt-1 text-center">
+                          <img src={editImage.url} className="mb-3" alt={editImage.name} style={{ maxWidth: '100%', maxHeight: '200px' }} />
+                          <div>
+                            <button type="button" className="btn btn-danger" onClick={handleEditDelete}><i className='fa-solid fa-trash' /></button>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="mt-1 text-center">
+                          <p>No Image</p>
+                          <input type="file" name="image" className="form-control" onChange={handleEditFileChange} />
+                        </div>
+                      )}
                     </form>
                   </div>
                 </div>

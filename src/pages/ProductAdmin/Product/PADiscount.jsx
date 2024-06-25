@@ -14,9 +14,9 @@ function PADiscount() {
                 <div className="w-auto sw-md-30">
                   <a href="/productadmin-dashboard" className="muted-link pb-1 d-inline-block breadcrumb-back">
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
-                    <span className="text-small align-middle">Home</span>
+                    <span className="text-medium align-middle">Home</span>
                   </a>
-                  <h1 className="mb-0 pb-0 display-4" id="title">Discount</h1>
+                  <h1 className="mb-0 pb-0 display-4" id="title">Combo Offers</h1>
                 </div>
               </div>
               {/* <!-- Title End --> */}
@@ -26,14 +26,14 @@ function PADiscount() {
               <div className="col-12 col-sm-6 col-md-auto d-flex align-items-end justify-content-end mb-2 mb-sm-0 order-sm-3">
                 <a href="/productadmin-add-discount" className="btn btn-outline-primary btn-icon btn-icon-start ms-0 ms-sm-1 w-100 w-md-auto">
                   <i data-acorn-icon="plus"></i>
-                  <span>Add Discount</span>
+                  <span>Add Offers</span>
                 </a>
                 <div className="dropdown d-inline-block d-xl-none">
                   <button type="button" className="btn btn-outline-primary btn-icon btn-icon-only ms-1" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
                     <i data-acorn-icon="sort"></i>
                   </button>
                   <div className="dropdown-menu dropdown-menu-end custom-sort">
-                    <a className="dropdown-item sort" data-sort="code" href="#">Code</a>
+                    <a className="dropdown-item sort" data-sort="name" href="#">Name</a>
                     <a className="dropdown-item sort" data-sort="type" href="#">Type</a>
                     <a className="dropdown-item sort" data-sort="date" href="#">Date</a>
                     <a className="dropdown-item sort" data-sort="usage" href="#">Usage</a>
@@ -113,10 +113,10 @@ function PADiscount() {
               <div className="card mb-2 bg-transparent no-shadow d-none d-lg-block">
                 <div className="card-body pt-0 pb-0 sh-3">
                   <div className="row g-0 h-100 align-content-center">
-                    <div className="col-12 col-lg-2 d-flex align-items-center mb-2 mb-lg-0 text-muted text-small">CODE</div>
-                    <div className="col-6 col-lg-2 d-flex align-items-center text-alternate text-medium text-muted text-small">TYPE</div>
-                    <div className="col-6 col-lg-4 d-flex align-items-center text-alternate text-medium text-muted text-small">DATE</div>
-                    <div className="col-6 col-lg-1 d-flex align-items-center text-alternate text-medium text-muted text-small">STATUS</div>
+                    <div className="col-12 col-lg-2 d-flex align-items-center mb-2 mb-lg-0 text-muted text-medium">NAME</div>
+                    <div className="col-6 col-lg-2 d-flex align-items-center text-alternate text-medium text-muted text-medium">TYPE</div>
+                    <div className="col-6 col-lg-4 d-flex align-items-center text-alternate text-medium text-muted text-medium">DATE</div>
+                    <div className="col-6 col-lg-1 d-flex align-items-center text-alternate text-medium text-muted text-medium">STATUS</div>
                   </div>
                 </div>
               </div>
@@ -132,11 +132,11 @@ function PADiscount() {
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-3 order-lg-2">
                         <div className="text-muted text-small d-lg-none">Type</div>
-                        <div className="text-alternate">Fixed Amount</div>
+                        <div className="text-muted">Fixed Amount</div>
                       </div>
                       <div className="col-6 col-lg-4 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-4 order-lg-3">
                         <div className="text-muted text-small d-lg-none">Date</div>
-                        <div className="text-alternate">01.06.2021 - 01.07.2021</div>
+                        <div className="text-muted">01.06.2021 - 01.07.2021</div>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-last order-lg-5">
                         <div className="text-muted text-small d-lg-none">Status</div>
@@ -160,7 +160,7 @@ function PADiscount() {
                         <div className="text-muted text-small d-lg-none">Code</div>
                         <a
                           href="/productadmin-view-discount"
-                          className="text-truncate h-100 d-flex align-items-center muted-link"
+                          className="text-truncate h-100 d-flex align-items-center"
                         >
                           15OFF
                         </a>
@@ -195,7 +195,7 @@ function PADiscount() {
                         <div className="text-muted text-small d-lg-none">Code</div>
                         <a
                           href="/productadmin-view-discount"
-                          className="text-truncate h-100 d-flex align-items-center muted-link"
+                          className="text-truncate h-100 d-flex align-items-center"
                           >
                           25OFF
                         </a>
@@ -230,7 +230,7 @@ function PADiscount() {
                         <div className="text-muted text-small d-lg-none">Code</div>
                         <a
                           href="/productadmin-view-discount"
-                          className="text-truncate h-100 d-flex align-items-center muted-link"
+                          className="text-truncate h-100 d-flex align-items-center"
                         >
                           NEWYEAR
                         </a>
@@ -261,7 +261,7 @@ function PADiscount() {
               </div>
             </div>
           </div>
-          {/* <!-- Discount List End --> */}
+          {/* <!--Discount List End --> */}
         </div>
       </main>
     </div>

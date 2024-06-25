@@ -471,7 +471,7 @@ function OrderDetails() {
                 <div className="w-auto sw-md-30">
                   <a href="/orderlist" className="muted-link pb-1 d-inline-block breadcrumb-back">
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
-                    <span className="text-small align-middle">Back</span>
+                    <span className="text-medium align-middle">Back</span>
                   </a>
                   <h1 className="mb-0 pb-0 display-4 sw-40" id="title">Order Detail: #order_id</h1>
                 </div>

@@ -27,18 +27,6 @@ function PAProduct() {
                   <i data-acorn-icon="plus"></i>
                   <span>Add Product</span>
                 </a>
-                <div className="dropdown d-inline-block d-lg-none">
-                  <button
-                    type="button"
-                    className="btn btn-outline-primary btn-icon btn-icon-only ms-1"
-                    data-bs-toggle="dropdown"
-                    data-bs-auto-close="outside"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    <i data-acorn-icon="sort"></i>
-                  </button>
-                </div>
               </div>
               {/* <!-- Top Buttons End --> */}
             </div>
@@ -60,11 +48,34 @@ function PAProduct() {
               </div>
             </div>
             {/* <!-- Search End --> */}
+            <div className="col-sm-12 col-md-7 col-lg-9 col-xxl-10 text-end mb-1">
+              <div className="d-inline-block">
+                {/* Filter Button Start */}
+                {/* <div className="dropdown-as-select w-100 w-md-auto">
+                    <button
+                      className="btn btn btn-outline-primary w-100 w-md-auto dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      {selectedCategory ? categories.find(cat => cat.id === selectedCategory).name : 'All Categories'}
+                    </button>
+                    <div className="dropdown-menu dropdown-menu-end">
+                      <a className={`dropdown-item ${!selectedCategory ? 'active' : ''}`} onClick={() => setSelectedCategory()}>All Categories</a>
+                      {categories.map(category => (
+                        <a key={category.id} className={`dropdown-item ${selectedCategory === category.id ? 'active' : ''}`} onClick={() => setSelectedCategory(category.id)}>{category.name}</a>
+                      ))}
+                    </div>
+                  </div> */}
+                {/* Filter Button End */}
+              </div>
+            </div>
 
             <div className="col-sm-12 col-md-7 col-lg-9 col-xxl-10 text-end mb-1">
               <div className="d-inline-block">
                 {/* <!-- Length Start --> */}
-                <div className="dropdown-as-select d-inline-block" data-childSelector="span">
+                {/* <div className="dropdown-as-select d-inline-block" data-childSelector="span">
                   <button className="btn p-0 shadow" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,3">
                     <span
                       className="btn btn-foreground-alternate dropdown-toggle"
@@ -81,7 +92,7 @@ function PAProduct() {
                     <a className="dropdown-item active" href="#">10 Items</a>
                     <a className="dropdown-item" href="#">20 Items</a>
                   </div>
-                </div>
+                </div> */}
                 {/* <!-- Length End --> */}
               </div>
             </div>
@@ -98,10 +109,13 @@ function PAProduct() {
                     <div className="col">
                       <div className="ps-5 pe-4 h-100">
                         <div className="row g-0 h-100 align-content-center custom-sort">
-                          <div className="col-lg-4 d-flex flex-column mb-lg-0 pe-3 d-flex">
+                          <div className="col-lg-3 d-flex flex-column mb-lg-0 pe-3 d-flex">
                             <div className="text-muted text-small cursor-pointer" data-sort="name">NAME</div>
                           </div>
                           <div className="col-lg-2 d-flex flex-column pe-1 justify-content-center">
+                            <div className="text-muted text-small cursor-pointer" data-sort="email">CATEGORY</div>
+                          </div>
+                          <div className="col-lg-1 d-flex flex-column pe-1 justify-content-center">
                             <div className="text-muted text-small cursor-pointer" data-sort="email">STOCK</div>
                           </div>
                           <div className="col-lg-2 d-flex flex-column pe-1 justify-content-center">
@@ -121,19 +135,22 @@ function PAProduct() {
                 <div className="card mb-2">
                   <div className="row g-0 h-100 sh-lg-9 position-relative">
                     <a href="/productadmin-view-products" className="col-auto position-relative">
-                      <img src="img/product/small/product-1.webp" alt="product" className="card-img card-img-horizontal sw-11 h-100" />
+                      <img src="img/product/plazzo-salwar-suit.webp" alt="product" className="card-img card-img-horizontal sw-11 h-100 sh-lg-9 " />
                     </a>
                     <div className="col py-4 py-lg-0">
                       <div className="ps-5 pe-4 h-100">
                         <div className="row g-0 h-100 align-content-center">
-                          <a href="/productadmin-view-products" className="col-11 col-lg-4 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center">
-                            PALAZZO SALWAR
+                          <a href="/productadmin-view-products" className="col-11 col-lg-3 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center">
+                            plazzo salwar
                           </a>
                           <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-3">
-                            <div className="lh-1 text-alternate">2.511</div>
+                            <div className="lh-1 text-alternate">Saree</div>
+                          </div>
+                          <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-3">
+                            <div className="lh-1 text-alternate">10</div>
                           </div>
                           <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-4">
-                            <div className="lh-1 text-alternate">$123.99</div>
+                            <div className="lh-1 text-alternate">₹1600</div>
                           </div>
                           <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
                             <span className="badge bg-outline-primary group">SALE</span>
@@ -152,19 +169,56 @@ function PAProduct() {
                <div className="card mb-2">
                   <div className="row g-0 h-100 sh-lg-9 position-relative">
                     <a href="/productadmin-view-products" className="col-auto position-relative">
-                      <img src="img/product/small/product-1.webp" alt="product" className="card-img card-img-horizontal sw-11 h-100" />
+                      <img src="img/product/Punjabi-salwar-suit-4-.webp" alt="product" className="card-img card-img-horizontal sw-11 h-100 sh-lg-9 " />
                     </a>
                     <div className="col py-4 py-lg-0">
                       <div className="ps-5 pe-4 h-100">
                         <div className="row g-0 h-100 align-content-center">
-                          <a href="/productadmin-view-products" className="col-11 col-lg-4 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center">
-                            ANARKALI SALWAR
+                          <a href="/productadmin-view-products" className="col-11 col-lg-3 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center">
+                            Punjabi salwar
                           </a>
                           <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-3">
-                            <div className="lh-1 text-alternate">2.511</div>
+                            <div className="lh-1 text-alternate">Salwar</div>
+                          </div>
+                          <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-3">
+                            <div className="lh-1 text-alternate">0</div>
                           </div>
                           <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-4">
-                            <div className="lh-1 text-alternate">$123.99</div>
+                            <div className="lh-1 text-alternate">₹2500</div>
+                          </div>
+                          <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
+                            <span className="badge bg-primary group">OUT OF STOCK</span>
+                          </div>
+                          <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
+                            <a href="/productadmin-update-products" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-pen'/></a>
+                          </div>
+                          <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
+                            <a href="#" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-trash'/></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+               </div>
+               <div className="card mb-2">
+                  <div className="row g-0 h-100 sh-lg-9 position-relative">
+                    <a href="/productadmin-view-products" className="col-auto position-relative">
+                      <img src="img/product/Salwar.webp" alt="product" className="card-img card-img-horizontal sw-11 h-100 sh-lg-9 " />
+                    </a>
+                    <div className="col py-4 py-lg-0">
+                      <div className="ps-5 pe-4 h-100">
+                        <div className="row g-0 h-100 align-content-center">
+                          <a href="/productadmin-view-products" className="col-11 col-lg-3 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center">
+                            Anarakali salwar
+                          </a>
+                          <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-3">
+                            <div className="lh-1 text-alternate">Salwar</div>
+                          </div>
+                          <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-3">
+                            <div className="lh-1 text-alternate">14</div>
+                          </div>
+                          <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-4">
+                            <div className="lh-1 text-alternate">₹1400</div>
                           </div>
                           <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
                             <span className="badge bg-outline-primary group">SALE</span>
@@ -183,22 +237,59 @@ function PAProduct() {
                <div className="card mb-2">
                   <div className="row g-0 h-100 sh-lg-9 position-relative">
                     <a href="/productadmin-view-products" className="col-auto position-relative">
-                      <img src="img/product/small/product-1.webp" alt="product" className="card-img card-img-horizontal sw-11 h-100" />
+                      <img src="img/product/Georgette-And-Satin-Designer-Saree-In-Dark-Pink-Colour-SR1542337-A.webp" alt="product" className="card-img card-img-horizontal sw-11 h-100 sh-lg-9 " />
                     </a>
                     <div className="col py-4 py-lg-0">
                       <div className="ps-5 pe-4 h-100">
                         <div className="row g-0 h-100 align-content-center">
-                          <a href="/productadmin-view-products" className="col-11 col-lg-4 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center">
-                            PUNJABI SALWAR
+                          <a href="/productadmin-view-products" className="col-11 col-lg-3 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center">
+                            Banarasi saree
                           </a>
                           <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-3">
-                            <div className="lh-1 text-alternate">2.511</div>
+                            <div className="lh-1 text-alternate">Saree</div>
+                          </div>
+                          <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-3">
+                            <div className="lh-1 text-alternate">15</div>
                           </div>
                           <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-4">
-                            <div className="lh-1 text-alternate">$123.99</div>
+                            <div className="lh-1 text-alternate">₹5000</div>
                           </div>
                           <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
                             <span className="badge bg-outline-primary group">SALE</span>
+                          </div>
+                          <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
+                            <a href="/productadmin-update-products" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-pen'/></a>
+                          </div>
+                          <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
+                            <a href="#" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-trash'/></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+               </div>
+               <div className="card mb-2">
+                  <div className="row g-0 h-100 sh-lg-9 position-relative">
+                    <a href="/productadmin-view-products" className="col-auto position-relative">
+                      <img src="img/product/black-saree-1-dmv15522.webp" alt="product" className="card-img card-img-horizontal sw-11 h-100 sh-lg-9 " />
+                    </a>
+                    <div className="col py-4 py-lg-0">
+                      <div className="ps-5 pe-4 h-100">
+                        <div className="row g-0 h-100 align-content-center">
+                          <a href="/productadmin-view-products" className="col-11 col-lg-3 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center">
+                            Kanjivaram saree
+                          </a>
+                          <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-3">
+                            <div className="lh-1 text-alternate">Saree</div>
+                          </div>
+                          <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-3">
+                            <div className="lh-1 text-alternate">0</div>
+                          </div>
+                          <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-4">
+                            <div className="lh-1 text-alternate">₹4500</div>
+                          </div>
+                          <div className="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
+                            <span className="badge bg-primary group">OUT OF STOCK</span>
                           </div>
                           <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
                             <a href="/productadmin-update-products" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-pen'/></a>
