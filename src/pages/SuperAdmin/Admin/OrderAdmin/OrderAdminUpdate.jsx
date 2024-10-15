@@ -1,16 +1,84 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 function OrderAdminUpdate() {
 
-  const [image, setImage] = useState(null);
+  const [editData, setEditData] = useState({
+    first_name: "",
+    password: "",
+    email: "",
+    phone_number: "",
+    username: "",
+    image: ""
+  });
 
-  const handleFileChange = (event) => {
+  const { id } = useParams();
+  const [editImage, setEditImage] = useState(null);
+
+  useEffect(() => {
+    handleEditData(id);
+  }, [id]);
+
+  const handleEditOnchange = (x) => {
+    const { name, value } = x.target;
+    setEditData({
+      ...editData,
+      [name]: value
+    });
+  };
+
+  const handleEditData = (userId) => {
+    axios.get(`http://localhost:8000/auth/order-admins-edit/${userId}`)
+      .then(response => {
+        setEditData({
+          id: response.data.id,
+          first_name: response.data.first_name,
+          password: response.data.password,
+          email: response.data.email,
+          phone_number: response.data.phone_number,
+          username: response.data.username,
+          image: response.data.image,
+        });
+        setEditImage({
+          url: response.data.image ? `http://localhost:8000${response.data.image}` : null,
+          file: null
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching product admin:', error);
+      });
+  };
+
+  const handleEditSubmit = async () => {
+    try {
+      let formData = new FormData();
+      formData.append('id', editData.id);
+      formData.append('first_name', editData.first_name);
+      formData.append('email', editData.email);
+      formData.append('phone_number', editData.phone_number);
+      formData.append('username', editData.username);
+      formData.append('password', editData.password);
+      if (editImage && editImage.file) {
+        formData.append('image', editImage.file); // Append file directly
+      }
+      let product_admin = await axios.patch(`http://localhost:8000/auth/order-admins-edit/${id}`, formData, {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      });
+      console.log("Response:", product_admin);
+      alert('Form Submitted Successfully');
+    } catch (err) {
+      console.error(err);
+      alert('Failed!!!')
+    }
+  };
+
+  const handleEditFileChange = (event) => {
     const file = event.target.files[0];
-  
     if (file) {
       const reader = new FileReader();
-      reader.onload = function(e) {
-        setImage({
+      reader.onload = function (e) {
+        setEditImage({
           file: file, // Store the file object itself
           url: e.target.result,
           name: file.name,
@@ -19,18 +87,12 @@ function OrderAdminUpdate() {
       };
       reader.readAsDataURL(file);
     } else {
-      setImage(null);
+      setEditImage(null);
     }
   };
-  
 
-  const handleDelete = () => {
-    setImage(null);
-  };
-
-  const formatSize = (bytes) => {
-    const megabytes = bytes / (1024 * 1024);
-    return megabytes.toFixed(2) + " MB";
+  const handleEditDelete = () => {
+    setEditImage(null);
   };
 
   return (
@@ -55,7 +117,7 @@ function OrderAdminUpdate() {
                {/* <!-- Top Buttons Start --> */}
              <div className="w-100 d-md-none"></div>
               <div className="col-12 col-sm-6 col-md-auto d-flex align-items-end justify-content-end mb-2 mb-sm-0 order-sm-3">
-                <a href="#" className="btn btn-outline-primary btn-icon btn-icon-start ms-0 ms-sm-1 w-100 w-md-auto">
+                <a href="#" className="btn btn-outline-primary btn-icon btn-icon-start ms-0 ms-sm-1 w-100 w-md-auto" onClick={handleEditSubmit}>
                   <span>Update</span>
                 </a>
                 <div className="dropdown d-inline-block d-lg-none">
@@ -83,36 +145,26 @@ function OrderAdminUpdate() {
                 <h2 className="small-title">Order Admin Update</h2>
                 <div className="card">
                   <div className="card-body">
-                    <form>
+                  <form>
                       <div className="mb-3">
                         <label className="form-label">Name</label>
-                        <input type="text" name='first_name' className="form-control"/>
+                        <input type="text" name='first_name' className="form-control" value={editData.first_name} onChange={handleEditOnchange} />
                       </div>
-                      {/* <div className="mb-3 w-100">
-                        <label className="form-label">Gender</label>
-                        <input type="text" className="form-control"/>
-                      </div>
-                      <div className="mb-3">
-                        <label className="form-label">Address</label>
-                        <textarea className="form-control html-editor-bubble html-editor sh-13" id="quillEditorBubble" style={{overflowY: 'scroll',padding:'10px 10px' }} ="Kannur, Kerala, 670014">
-                          Kannur, Kerala, 670014, India
-                        </textarea>
-                      </div> */}
                       <div className="mb-3">
                         <label className="form-label">Mobile</label>
-                        <input type="tel" name='phone_number' className="form-control" />
+                        <input type="tel" name='phone_number' className="form-control" value={editData.phone_number} onChange={handleEditOnchange} />
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Email</label>
-                        <input type="email" name='email' className="form-control" />
+                        <input type="email" name='email' className="form-control" value={editData.email} onChange={handleEditOnchange} />
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Username</label>
-                        <input type="tel" name='username' className="form-control" />
+                        <input type="text" name='username' className="form-control" value={editData.username} onChange={handleEditOnchange} readOnly/>
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Password</label>
-                        <input type="text" name='password' className="form-control" />
+                        <input type="text" name='password' className="form-control" value="Alice@123" onChange={handleEditOnchange} readOnly/>
                       </div>
                     </form>
                   </div>
@@ -127,15 +179,19 @@ function OrderAdminUpdate() {
                 <h2 className="small-title">Image</h2>
                 <div className="card">
                   <div className="card-body">
-                    <form>
-                      {!image && <input type="file" name="image" className="form-control" onChange={handleFileChange} />}
-                        {image && (
-                          <div className="mt-3">
-                            <img src={image.url} className="mb-3" alt={image.name} style={{ maxWidth: '100%', maxHeight: '200px', justifyContent: 'center' }} />
-                            <p>Name: {image.name}</p>
-                            <p>Size: {formatSize(image.size)}</p>
-                            <center><button type="button" className="btn btn-danger" onClick={handleDelete}>Delete</button></center>
+                  <form>
+                      {editImage && editImage.url ? (
+                        <div className="mt-1 text-center">
+                          <img src={editImage.url} className="mb-3" alt={editImage.name} style={{ maxWidth: '100%', maxHeight: '200px' }} />
+                          <div>
+                            <button type="button" className="btn btn-danger" onClick={handleEditDelete}><i className='fa-solid fa-trash' /></button>
                           </div>
+                        </div>
+                      ) : (
+                        <div className="mt-1 text-center">
+                          <p>No Image</p>
+                          <input type="file" name="image" className="form-control" onChange={handleEditFileChange} />
+                        </div>
                       )}
                     </form>
                   </div>
@@ -143,7 +199,7 @@ function OrderAdminUpdate() {
               </div>
               {/* <!-- Image End --> */}
               {/* <!-- History Start --> */}
-              <div className="mb-5">
+              {/* <div className="mb-5">
                 <h2 className="small-title">History</h2>
                 <div className="card">
                   <div className="card-body mb-n3">
@@ -169,7 +225,7 @@ function OrderAdminUpdate() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/* <!-- History End --> */}
 
               {/* <!-- Gallery Start --> */}

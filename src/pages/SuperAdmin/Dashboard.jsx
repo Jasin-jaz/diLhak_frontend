@@ -16,7 +16,7 @@ function Dashboard() {
                 <a className="muted-link pb-2 d-inline-block hidden" href="#">
                   <span className="align-middle lh-1 text-small">&nbsp;</span>
                 </a>
-                <h1 className="mb-0 pb-0 display-4" id="title">Welcome Super Admin!</h1>
+                <h1 className="mb-0 pb-0 display-4" id="title">Welcome Robert, <span className='text-primary'>Super Admin</span></h1>
               </div>
               {/* <!-- Title End --> */}
             </div>
@@ -51,7 +51,7 @@ function Dashboard() {
                           <i data-acorn-icon="dollar" className="text-primary"></i>
                         </div>
                         <div className="mb-1 d-flex align-items-center text-alternate text-small lh-1-25">EARNINGS</div>
-                        <div className="text-primary cta-4">$ 315.20</div>
+                        <div className="text-primary cta-4">₹ 31555.20</div>
                       </div>
                     </div>
                   </div>
@@ -133,7 +133,7 @@ function Dashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
+                            <span className="text-small">₹</span>
                             17.35
                           </span>
                         </div>
@@ -152,8 +152,8 @@ function Dashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            145.20
+                            <span className="text-small">₹</span>
+                            1455.20
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Today - 11:32</div>
@@ -171,8 +171,8 @@ function Dashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            110.85
+                            <span className="text-small">₹</span>
+                            1105.85
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Today - 11:20</div>
@@ -190,8 +190,8 @@ function Dashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            58.00
+                            <span className="text-small">₹</span>
+                            558.00
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Today - 10:20</div>
@@ -209,8 +209,8 @@ function Dashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            22.05
+                            <span className="text-small">₹</span>
+                            622.05
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Today - 07:30</div>
@@ -229,8 +229,8 @@ function Dashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            14.25
+                            <span className="text-small">₹</span>
+                            914.25
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Monday - 17:30</div>
@@ -249,8 +249,8 @@ function Dashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            42.00
+                            <span className="text-small">₹</span>
+                            1142.00
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Monday - 11:25</div>
@@ -269,8 +269,8 @@ function Dashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            63.25
+                            <span className="text-small">₹</span>
+                            1163.25
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Monday - 15:20</div>
@@ -289,8 +289,8 @@ function Dashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            74.00
+                            <span className="text-small">₹</span>
+                            10074.00
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Monday - 13:10</div>

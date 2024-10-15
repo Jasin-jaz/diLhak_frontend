@@ -109,9 +109,9 @@ function UpdateProduct() {
                 <div className="w-auto sw-md-40">
                   <a href="/products" className="muted-link pb-1 d-inline-block breadcrumb-back">
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
-                    <span className="text-small align-middle">Back</span>
+                    <span className="text-medium align-middle">Back</span>
                   </a>
-                  <h1 className="mb-0 pb-0 display-4" id="title">Update Product</h1>
+                  <h1 className="mb-0 pb-0 display-4" id="title">Update Product Variant</h1>
                 </div>
               </div>
               {/* <!-- Title End --> */}
@@ -154,7 +154,7 @@ function UpdateProduct() {
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Product Description</label>
-                        <textarea className="form-control html-editor-bubble html-editor sh-13" id="quillEditorBubble" style={{overflowY: 'scroll',padding:'10px 10px' }}>
+                        <textarea className="form-control html-editor-bubble html-editor sh-25" id="quillEditorBubble" style={{overflowY: 'scroll',padding:'10px 10px' }}>
                         </textarea>
                       </div>
                     </form>
@@ -174,7 +174,7 @@ function UpdateProduct() {
                         <select className="form-select select-single-no-search">
                           <option label="--Category--"></option>
                           <option value="Breadstick">SALWAR</option>
-                          <option value="Biscotti">SAREE</option>
+                          <option value="Biscotti">Saree</option>
                           <option value="Fougasse">TOP</option>
                         </select>
                       </div>
@@ -183,7 +183,7 @@ function UpdateProduct() {
                         <select className="form-select select-single-no-search">
                           <option label="--Category--"></option>
                           <option value="Breadstick">PLAZZO SALWAR</option>
-                          <option value="Biscotti">KANCHIPURAM SAREE</option>
+                          <option value="Biscotti">Banarasi Saree</option>
                           <option value="Fougasse">DENIM TOP</option>
                         </select>
                       </div>
@@ -293,7 +293,7 @@ function UpdateProduct() {
               {/* <!-- Gallery End --> */}
 
               {/* <!-- History Start --> */}
-              <div className="mb-5">
+              {/* <div className="mb-5">
                 <h2 className="small-title">History</h2>
                 <div className="card">
                   <div className="card-body mb-n3">
@@ -315,7 +315,7 @@ function UpdateProduct() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/* <!-- History End --> */}
 
               
@@ -344,8 +344,8 @@ function UpdateProduct() {
                               <select className="form-select" value={attribute.size} onChange={(e) => handleInputChange(attribute.id, "size", e.target.value)}>
                                 <option label="--size--"></option>
                                 <option value="S">S</option>
-                                <option value="M">M</option>
-                                <option value="L">L</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
                                 <option value="XL">XL</option>
                                 <option value="XXL">XXL</option>
                                 <option value="XXXL">XXXL</option>
@@ -375,13 +375,13 @@ function UpdateProduct() {
                           <div className="">
                             <div className="mb-3">
                               <label className="form-label">Stock</label>
-                              <input type="text" className="form-control" value={attribute.stock} onChange={(e) => handleInputChange(attribute.id, "discountPrice", e.target.value)} />
+                              <input type="text" className="form-control"  />
                             </div>
                           </div>
                           <div className="">
                             <div className="mb-3">
                               <label className="form-label">SKU (optional)</label>
-                              <input type="text" className="form-control" value={attribute.sku} onChange={(e) => handleInputChange(attribute.id, "discountPrice", e.target.value)} />
+                              <input type="text" className="form-control" />
                             </div>
                           </div>
                         </div>

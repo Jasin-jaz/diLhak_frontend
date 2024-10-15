@@ -44,7 +44,7 @@ function AddDiscount() {
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
                     <span className="text-medium align-middle">Back</span>
                   </a>
-                  <h1 className="mb-0 pb-0 display-4" id="title">Combo Offers</h1>
+                  <h1 className="mb-0 pb-0 display-4" id="title">Add Combo Offers</h1>
                 </div>
               </div>
               {/* <!-- Title End --> */}
@@ -76,7 +76,7 @@ function AddDiscount() {
             <div className="col-xl-8">
               {/* <!-- Combo offers Info Start --> */}
               <div className="mb-5">
-                <h2 className="small-title">Combo offers info</h2>
+                <h2 className="small-title">Add Combo offers informations</h2>
                 <div className="card">
                   <div className="card-body">
                     <form>
@@ -177,39 +177,39 @@ function AddDiscount() {
                   <div className="card-body mb-n3">
                     <div className="mb-3 d-flex">
                       <input type="checkbox" value="1" className='form-check-input me-2'/>
-                      <label className='form-check-label'>1</label>
+                      <label className='form-check-label'>Heavy Georgette Plazzo Salwar</label>
                     </div>
                     <div className="mb-3 d-flex">
                       <input type="checkbox" value="2" className='form-check-input me-2'/>
-                      <label className='form-check-label'>2</label>
+                      <label className='form-check-label'>Raivat organza Punjabi salwar</label>
                     </div>
                     <div className="mb-3 d-flex">
                       <input type="checkbox" value="3" className='form-check-input me-2'/>
-                      <label className='form-check-label'>3</label>
+                      <label className='form-check-label'>Frock Kurti</label>
                     </div>
                     <div className="mb-3 d-flex">
                       <input type="checkbox" value="4" className='form-check-input me-2'/>
-                      <label className='form-check-label'>4</label>
+                      <label className='form-check-label'>Poly Wrinkle Georgette Mix Pant And Top</label>
                     </div>
                     <div className="mb-3 d-flex">
                       <input type="checkbox" value="4" className='form-check-input me-2'/>
-                      <label className='form-check-label'>4</label>
+                      <label className='form-check-label'>Woven Design Zari Silk Blend Banarasi Saree</label>
                     </div>
                     <div className="mb-3 d-flex">
                       <input type="checkbox" value="4" className='form-check-input me-2'/>
-                      <label className='form-check-label'>4</label>
+                      <label className='form-check-label'>Floral Printed Floral Anarkali Kurta</label>
                     </div>
                     <div className="mb-3 d-flex">
                       <input type="checkbox" value="4" className='form-check-input me-2'/>
-                      <label className='form-check-label'>4</label>
+                      <label className='form-check-label'>Tissue Kanjivaram Saree</label>
                     </div>
                     <div className="mb-3 d-flex">
                       <input type="checkbox" value="4" className='form-check-input me-2'/>
-                      <label className='form-check-label'>4</label>
+                      <label className='form-check-label'>Wedding Wear Kanjiviram Silk Saree</label>
                     </div>
                     <div className="mb-3 d-flex">
                       <input type="checkbox" value="4" className='form-check-input me-2'/>
-                      <label className='form-check-label'>4</label>
+                      <label className='form-check-label'>Floral Printed Floral Anarkali Kurta</label>
                     </div>
                     <div className="mb-3 d-flex">
                       <input type="checkbox" value="4" className='form-check-input me-2'/>

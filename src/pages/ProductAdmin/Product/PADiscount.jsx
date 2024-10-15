@@ -12,7 +12,7 @@ function PADiscount() {
               {/* <!-- Title Start --> */}
               <div className="col-auto mb-3 mb-md-0 me-auto">
                 <div className="w-auto sw-md-30">
-                  <a href="/productadmin-dashboard" className="muted-link pb-1 d-inline-block breadcrumb-back">
+                  <a href="/admin-dashboard" className="muted-link pb-1 d-inline-block breadcrumb-back">
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
                     <span className="text-medium align-middle">Home</span>
                   </a>
@@ -92,12 +92,12 @@ function PADiscount() {
                       data-bs-delay="0"
                       title="Item Count"
                     >
-                      10 Items
+                      6 Items
                     </span>
                   </button>
                   <div className="dropdown-menu shadow dropdown-menu-end">
                     <a className="dropdown-item" href="#">5 Items</a>
-                    <a className="dropdown-item active" href="#">10 Items</a>
+                    <a className="dropdown-item active" href="#">6 Items</a>
                     <a className="dropdown-item" href="#">20 Items</a>
                   </div>
                 </div>
@@ -127,12 +127,12 @@ function PADiscount() {
                       <div className="col-11 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-1 order-lg-1 h-lg-100 position-relative">
                         <div className="text-muted text-small d-lg-none">Code</div>
                         <a href="/productadmin-view-discount" className="text-truncate h-100 d-flex align-items-center">
-                          SUMMERSALE
+                          SUMMER SALE
                         </a>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-3 order-lg-2">
                         <div className="text-muted text-small d-lg-none">Type</div>
-                        <div className="text-muted">Fixed Amount</div>
+                        <div className="text-muted">Cashback</div>
                       </div>
                       <div className="col-6 col-lg-4 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-4 order-lg-3">
                         <div className="text-muted text-small d-lg-none">Date</div>
@@ -159,7 +159,7 @@ function PADiscount() {
                       <div className="col-11 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-1 order-lg-1 h-lg-100 position-relative">
                         <div className="text-muted text-small d-lg-none">Code</div>
                         <a
-                          href="/productadmin-view-discount"
+                          href="/viewdiscount"
                           className="text-truncate h-100 d-flex align-items-center"
                         >
                           15OFF
@@ -180,7 +180,7 @@ function PADiscount() {
                         </div>
                       </div>
                       <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
-                        <a href="/productadmin-update-discount" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-pen'/></a>
+                        <a href="/updatediscount" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-pen'/></a>
                       </div>
                       <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
                         <a href="#" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-trash'/></a>
@@ -194,7 +194,7 @@ function PADiscount() {
                       <div className="col-11 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-1 order-lg-1 h-lg-100 position-relative">
                         <div className="text-muted text-small d-lg-none">Code</div>
                         <a
-                          href="/productadmin-view-discount"
+                          href="/viewdiscount"
                           className="text-truncate h-100 d-flex align-items-center"
                           >
                           25OFF
@@ -206,16 +206,16 @@ function PADiscount() {
                       </div>
                       <div className="col-6 col-lg-4 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-4 order-lg-3">
                         <div className="text-muted text-small d-lg-none">Date</div>
-                        <div className="text-muted">01.02.2021 - 01.03.2021</div>
+                        <div className="text-muted">20.02.2021 - 01.03.2021</div>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-last order-lg-5">
                         <div className="text-muted text-small d-lg-none">Status</div>
                         <div>
-                          <span className="badge rounded-pill bg-outline-muted">EXPIRED</span>
+                          <span className="badge rounded-pill bg-outline-primary">ACTIVE</span>
                         </div>
                       </div>
                       <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
-                        <a href="/productadmin-update-discount" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-pen'/></a>
+                        <a href="/updatediscount" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-pen'/></a>
                       </div>
                       <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
                         <a href="#" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-trash'/></a>
@@ -229,15 +229,50 @@ function PADiscount() {
                       <div className="col-11 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-1 order-lg-1 h-lg-100 position-relative">
                         <div className="text-muted text-small d-lg-none">Code</div>
                         <a
-                          href="/productadmin-view-discount"
+                          href="/viewdiscount"
                           className="text-truncate h-100 d-flex align-items-center"
-                        >
-                          NEWYEAR
+                          >
+                          ONAM SALE
                         </a>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-3 order-lg-2">
                         <div className="text-muted text-small d-lg-none">Type</div>
-                        <div className="text-muted">Percentage</div>
+                        <div className="text-muted">Giveaways</div>
+                      </div>
+                      <div className="col-6 col-lg-4 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-4 order-lg-3">
+                        <div className="text-muted text-small d-lg-none">Date</div>
+                        <div className="text-muted">01.06.2021 - 01.05.2021</div>
+                      </div>
+                      <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-last order-lg-5">
+                        <div className="text-muted text-small d-lg-none">Status</div>
+                        <div>
+                          <span className="badge rounded-pill bg-outline-primary">ACTIVE</span>
+                        </div>
+                      </div>
+                      <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
+                        <a href="/updatediscount" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-pen'/></a>
+                      </div>
+                      <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
+                        <a href="#" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-trash'/></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card mb-2">
+                  <div className="card-body py-4 py-lg-0 sh-lg-8">
+                    <div className="row g-0 h-100 align-content-center">
+                      <div className="col-11 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-1 order-lg-1 h-lg-100 position-relative">
+                        <div className="text-muted text-small d-lg-none">Code</div>
+                        <a
+                          href="/viewdiscount"
+                          className="text-truncate h-100 d-flex align-items-center"
+                        >
+                          NEWYEAR SALE
+                        </a>
+                      </div>
+                      <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-3 order-lg-2">
+                        <div className="text-muted text-small d-lg-none">Type</div>
+                        <div className="text-muted">Coupons</div>
                       </div>
                       <div className="col-6 col-lg-4 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-4 order-lg-3">
                         <div className="text-muted text-small d-lg-none">Date</div>
@@ -250,7 +285,42 @@ function PADiscount() {
                         </div>
                       </div>
                       <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
-                        <a href="/productadmin-update-discount" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-pen'/></a>
+                        <a href="/updatediscount" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-pen'/></a>
+                      </div>
+                      <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
+                        <a href="#" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-trash'/></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card mb-2">
+                  <div className="card-body py-4 py-lg-0 sh-lg-8">
+                    <div className="row g-0 h-100 align-content-center">
+                      <div className="col-11 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-1 order-lg-1 h-lg-100 position-relative">
+                        <div className="text-muted text-small d-lg-none">Code</div>
+                        <a
+                          href="/viewdiscount"
+                          className="text-truncate h-100 d-flex align-items-center"
+                        >
+                          RAMZAN SALE
+                        </a>
+                      </div>
+                      <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-3 order-lg-2">
+                        <div className="text-muted text-small d-lg-none">Type</div>
+                        <div className="text-muted">Gift Cards</div>
+                      </div>
+                      <div className="col-6 col-lg-4 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-4 order-lg-3">
+                        <div className="text-muted text-small d-lg-none">Date</div>
+                        <div className="text-muted">29.07.2020 - 07.08.2021</div>
+                      </div>
+                      <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-last order-lg-5">
+                        <div className="text-muted text-small d-lg-none">Status</div>
+                        <div>
+                          <span className="badge rounded-pill bg-outline-muted">EXPIRED</span>
+                        </div>
+                      </div>
+                      <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
+                        <a href="/updatediscount" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-pen'/></a>
                       </div>
                       <div className="col-12 col-lg-1 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
                         <a href="#" className="col-11 col-lg-1 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center"><i className='fa-solid fa-trash'/></a>
@@ -262,6 +332,27 @@ function PADiscount() {
             </div>
           </div>
           {/* <!--Discount List End --> */}
+          {/* <!-- Items Pagination Start --> */}
+          <div className="w-100 d-flex justify-content-center">
+              <nav>
+                <ul className="pagination">
+                  <li className="page-item disabled">
+                    <a className="page-link shadow" href="#" tabindex="-1" aria-disabled="true">
+                      <i data-acorn-icon="chevron-left"></i>
+                    </a>
+                  </li>
+                  <li className="page-item active"><a className="page-link shadow" href="#">1</a></li>
+                  <li className="page-item"><a className="page-link shadow" href="#">2</a></li>
+                  <li className="page-item"><a className="page-link shadow" href="#">3</a></li>
+                  <li className="page-item">
+                    <a className="page-link shadow" href="#">
+                      <i data-acorn-icon="chevron-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            {/* <!-- Items Pagination End --> */}
         </div>
       </main>
     </div>

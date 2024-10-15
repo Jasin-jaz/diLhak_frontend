@@ -219,7 +219,7 @@ function PASubCategory() {
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
                     <span className="text-medium align-middle">Home</span>
                   </a>
-                  <h1 className="mb-0 pb-0 display-4" id="title">Sub Category List</h1>
+                  <h1 className="mb-0 pb-0 display-4" id="title">Product List</h1>
                 </div>
               </div>
               {/* Title End */}
@@ -234,7 +234,7 @@ function PASubCategory() {
                   data-bs-target="#subcategoryAddModal"
                 >
                   <i data-acorn-icon="plus"></i>
-                  <span>Add Sub Category</span>
+                  <span>Add Product</span>
                 </button>
               </div>
               {/* Top Buttons End */}
@@ -270,7 +270,7 @@ function PASubCategory() {
                       {selectedCategory ? categories.find(cat => cat.id === selectedCategory).name : 'All Categories'}
                     </button>
                     <div className="dropdown-menu dropdown-menu-end">
-                      <a className={`dropdown-item ${!selectedCategory ? 'active' : ''}`} onClick={() => setSelectedCategory()}>All Categories</a>
+                      <a className={`dropdown-item ${!selectedCategory ? 'active' : ''}`} onClick={() => setSelectedCategory()}>All Products</a>
                       {categories.map(category => (
                         <a key={category.id} className={`dropdown-item ${selectedCategory === category.id ? 'active' : ''}`} onClick={() => setSelectedCategory(category.id)}>{category.name}</a>
                       ))}
@@ -285,6 +285,32 @@ function PASubCategory() {
           <div className="row g-0">
             <div className="col-12 mb-5">
               <div id="checkboxTable">
+                <div className="mb-4 mb-lg-3 bg-transparent no-shadow d-none d-lg-block">
+                  <div className="row g-0">
+                    <div className="col-auto sw-11 d-none d-lg-flex"></div>
+                    <div className="col">
+                      <div className="ps-5 pe-4 h-100">
+                        <div className="row g-0 h-100 align-content-center custom-sort">
+                          <div className="col-lg-5 d-flex flex-column mb-lg-0 pe-3 d-flex">
+                            <div className="text-muted text-medium cursor-pointer" data-sort="name">NAME</div>
+                          </div>
+                          <div className="col-lg-5 d-flex flex-column pe-1 justify-content-center">
+                            <div className="text-muted text-medium cursor-pointer" data-sort="email">CATEGORY</div>
+                          </div>
+                          {/* <div className="col-lg-1 d-flex flex-column pe-1 justify-content-center">
+                            <div className="text-muted text-medium cursor-pointer" data-sort="email">STOCK</div>
+                          </div>
+                          <div className="col-lg-2 d-flex flex-column pe-1 justify-content-center">
+                            <div className="text-muted text-medium cursor-pointer" data-sort="phone">PRICE</div>
+                          </div>
+                          <div className="col-lg-2 d-flex flex-column pe-1 justify-content-center">
+                            <div className="text-muted text-medium cursor-pointer" data-sort="group">STATUS</div>
+                          </div> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 {/* List Items Start */}
                 {/* Filtered Subcategory Cards */}
                 {subcategorys
@@ -348,7 +374,7 @@ function PASubCategory() {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title text-primary">Sub Category Detail</h5>
+              <h5 className="modal-title text-primary">Product Detail</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
@@ -372,19 +398,24 @@ function PASubCategory() {
                     <label className="form-label text-primary">Category</label>
                     <input type="text" className="form-control" value={viewSubCategory.categoryName} readOnly/>
                   </div>
+                  <div className="mb-3">
+                        <label className="form-label text-primary">Product Description</label>
+                        <textarea className="form-control html-editor-bubble html-editor sh-25" id="quillEditorBubble" style={{overflowY: 'scroll',padding:'10px 10px' }} readOnly>
+                        {"The saree comes with an unstitched blouse piece. The blouse worn by the model might be for modelling purpose only. Check the image of the blouse piece to understand how the actual blouse piece looks like.\nSize & Fit\nLength: 5.5 metres plus 0.8 metre blouse piece\nWidth: 1.06 metres (approx.)\nMaterial & Care\nSilk Blend\nDry Clean"}</textarea>
+                  </div>
                 </form>
               )}
             </div>
           </div>
         </div>
       </div>
-      {/* Sub Category view by id Modal End */}
-      {/* Sub Category Update Modal Start */}
+      {/* Product view by id Modal End */}
+      {/* Product Update Modal Start */}
       <div className="modal modal-right fade" id="subcategoryUpdateModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title text-primary">Sub Category Detail</h5>
+              <h5 className="modal-title text-primary">Edit Product Detail</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
@@ -411,12 +442,20 @@ function PASubCategory() {
                   <label className="form-label text-primary">Name</label>
                   <input type="text" className="form-control" name="name" value={editSubCategory.name} onChange={handleEditOnchange} />
                 </div>
+                <div className="mb-3">
+                <label className="form-label text-primary">Category</label>
                 <select className="form-select" name="category" onChange={handleEditOnchange} value={editSubCategory.category}>
                     <option value="" disabled>Select a category</option>
                     {categories.map(category => (
                         <option key={category.id} value={category.id}>{category.name}</option>
                     ))}
                 </select>
+                </div>
+                <div className="mb-3">
+                        <label className="form-label text-primary">Product Description</label>
+                        <textarea className="form-control html-editor-bubble html-editor sh-25" id="quillEditorBubble" style={{overflowY: 'scroll',padding:'10px 10px' }}>
+                        {"The saree comes with an unstitched blouse piece. The blouse worn by the model might be for modelling purpose only. Check the image of the blouse piece to understand how the actual blouse piece looks like.\nSize & Fit\nLength: 5.5 metres plus 0.8 metre blouse piece\nWidth: 1.06 metres (approx.)\nMaterial & Care\nSilk Blend\nDry Clean"}</textarea>
+                </div>
               </form>
             </div>
             <div className="modal-footer border-0">
@@ -427,13 +466,13 @@ function PASubCategory() {
           </div>
         </div>
       </div>
-      {/* Sub Category Update Modal End */}
-      {/* Sub Category Add Modal Start */}
+      {/* Product Update Modal End */}
+      {/* Product Add Modal Start */}
       <div className="modal modal-right fade" id="subcategoryAddModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title text-primary">Add New Sub Category</h5>
+              <h5 className="modal-title text-primary">Add New Product</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
@@ -462,6 +501,11 @@ function PASubCategory() {
                     ))}
                   </select>
                 </div>
+                  <div className="mb-3">
+                        <label className="form-label text-primary">Product Description</label>
+                        <textarea className="form-control html-editor-bubble html-editor sh-25" id="quillEditorBubble" style={{overflowY: 'scroll',padding:'10px 10px' }}>
+                        </textarea>
+                  </div>
               </form>
             </div>
             <div className="modal-footer border-0">
@@ -472,7 +516,7 @@ function PASubCategory() {
           </div>
         </div>
       </div>
-      {/* Sub Category Add Modal End */}
+      {/* Product Add Modal End */}
     </div>
   )
 }

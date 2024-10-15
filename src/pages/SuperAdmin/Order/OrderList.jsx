@@ -11,7 +11,7 @@ function OrderList() {
               {/* <!-- Title Start --> */}
               <div className="col-auto mb-3 mb-md-0 me-auto">
                 <div className="w-auto sw-md-30">
-                  <a href="/admin-dashboard" className="muted-link pb-1 d-inline-block breadcrumb-back">
+                  <a href="/orderadmin-dashboard" className="muted-link pb-1 d-inline-block breadcrumb-back">
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
                     <span className="text-medium align-middle">Home</span>
                   </a>
@@ -31,9 +31,11 @@ function OrderList() {
                     aria-expanded="false"
                   ></button>
                   <div className="dropdown-menu dropdown-menu-end">
+                  <a className="dropdown-item active" href="#">Status: All</a>
                     <a className="dropdown-item" href="#">Status: Pending</a>
+                    <a className="dropdown-item" href="#">Status: Confirmed</a>
                     <a className="dropdown-item" href="#">Status: Shipped</a>
-                    <a className="dropdown-item active" href="#">Status: Delivered</a>
+                    <a className="dropdown-item" href="#">Status: Delivered</a>
                   </div>
                 </div>
                 {/* <!-- Status Button End --> */}
@@ -96,7 +98,7 @@ function OrderList() {
                     </span>
                   </button>
                   <div className="dropdown-menu shadow dropdown-menu-end">
-                    <a className="dropdown-item" href="#">5 Items</a>
+                    <a className="dropdown-item" href="#">6 Items</a>
                     <a className="dropdown-item active" href="#">10 Items</a>
                     <a className="dropdown-item" href="#">20 Items</a>
                   </div>
@@ -122,12 +124,45 @@ function OrderList() {
                 </div>
               </div>
               <div id="checkboxTable">
+              <div className="card mb-2">
+                  <div className="card-body pt-0 pb-0 sh-21 sh-md-8">
+                    <div className="row g-0 h-100 align-content-center">
+                      <div className="col-11 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-1 order-md-1 h-md-100 position-relative">
+                        <div className="text-muted text-small d-md-none">Id</div>
+                        <a href="/admin-view-order" className="text-truncate h-100 d-flex align-items-center">1225</a>
+                      </div>
+                      <div className="col-6 col-md-3 d-flex flex-column justify-content-center mb-2 mb-md-0 order-3 order-md-2">
+                        <div className="text-muted text-small d-md-none">Name</div>
+                        <div className="text-alternate">Amelia Earhart</div>
+                      </div>
+                      <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-4 order-md-3">
+                        <div className="text-muted text-small d-md-none">Price</div>
+                        <div className="text-alternate">
+                          <span>
+                            <span className="text-small">₹</span>
+                            7,870.00
+                          </span>
+                        </div>
+                      </div>
+                      <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-5 order-md-4">
+                        <div className="text-muted text-small d-md-none">Date</div>
+                        <div className="text-alternate">17.09.2020</div>
+                      </div>
+                      <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-last order-md-5">
+                        <div className="text-muted text-small d-md-none">Status</div>
+                        <div className="text-alternate">
+                          <span className="badge rounded-pill bg-outline-primary">CONFIRMED</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div className="card mb-2">
                   <div className="card-body pt-0 pb-0 sh-21 sh-md-8">
                     <div className="row g-0 h-100 align-content-center">
                       <div className="col-11 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-1 order-md-1 h-md-100 position-relative">
                         <div className="text-muted text-small d-md-none">Id</div>
-                        <a href="/orderdetails" className="text-truncate h-100 d-flex align-items-center">1239</a>
+                        <a href="/orderadmin-view-order" className="text-truncate h-100 d-flex align-items-center">1289</a>
                       </div>
                       <div className="col-6 col-md-3 d-flex flex-column justify-content-center mb-2 mb-md-0 order-3 order-md-2">
                         <div className="text-muted text-small d-md-none">Name</div>
@@ -137,14 +172,14 @@ function OrderList() {
                         <div className="text-muted text-small d-md-none">Price</div>
                         <div className="text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            321.75
+                            <span className="text-small">₹</span>
+                            1,321.75
                           </span>
                         </div>
                       </div>
                       <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-5 order-md-4">
                         <div className="text-muted text-small d-md-none">Date</div>
-                        <div className="text-alternate">13.09.2020</div>
+                        <div className="text-alternate">18.09.2020</div>
                       </div>
                       <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-last order-md-5">
                         <div className="text-muted text-small d-md-none">Status</div>
@@ -160,7 +195,40 @@ function OrderList() {
                     <div className="row g-0 h-100 align-content-center">
                       <div className="col-11 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-1 order-md-1 h-md-100 position-relative">
                         <div className="text-muted text-small d-md-none">Id</div>
-                        <a href="/orderdetails" className="text-truncate h-100 d-flex align-items-center">1251</a>
+                        <a href="/orderadmin-view-order" className="text-truncate h-100 d-flex align-items-center">1290</a>
+                      </div>
+                      <div className="col-6 col-md-3 d-flex flex-column justify-content-center mb-2 mb-md-0 order-3 order-md-2">
+                        <div className="text-muted text-small d-md-none">Name</div>
+                        <div className="text-alternate">Olivia Emerald</div>
+                      </div>
+                      <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-4 order-md-3">
+                        <div className="text-muted text-small d-md-none">Price</div>
+                        <div className="text-alternate">
+                          <span>
+                            <span className="text-small">₹</span>
+                            1,321.75
+                          </span>
+                        </div>
+                      </div>
+                      <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-5 order-md-4">
+                        <div className="text-muted text-small d-md-none">Date</div>
+                        <div className="text-alternate">18.09.2020</div>
+                      </div>
+                      <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-last order-md-5">
+                        <div className="text-muted text-small d-md-none">Status</div>
+                        <div className="text-alternate">
+                          <span className="badge rounded-pill bg-outline-secondary">PENDING</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card mb-2">
+                  <div className="card-body pt-0 pb-0 sh-21 sh-md-8">
+                    <div className="row g-0 h-100 align-content-center">
+                      <div className="col-11 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-1 order-md-1 h-md-100 position-relative">
+                        <div className="text-muted text-small d-md-none">Id</div>
+                        <a href="/orderadmin-view-order" className="text-truncate h-100 d-flex align-items-center">1351</a>
                       </div>
                       <div className="col-6 col-md-3 d-flex flex-column justify-content-center mb-2 mb-md-0 order-3 order-md-2">
                         <div className="text-muted text-small d-md-none">Name</div>
@@ -170,14 +238,14 @@ function OrderList() {
                         <div className="text-muted text-small d-md-none">Price</div>
                         <div className="text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            59.00
+                            <span className="text-small">₹</span>
+                            1,059.00
                           </span>
                         </div>
                       </div>
                       <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-5 order-md-4">
                         <div className="text-muted text-small d-md-none">Date</div>
-                        <div className="text-alternate">14.09.2020</div>
+                        <div className="text-alternate">18.09.2020</div>
                       </div>
                       <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-last order-md-5">
                         <div className="text-muted text-small d-md-none">Status</div>
@@ -193,7 +261,7 @@ function OrderList() {
                     <div className="row g-0 h-100 align-content-center">
                       <div className="col-11 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-1 order-md-1 h-md-100 position-relative">
                         <div className="text-muted text-small d-md-none">Id</div>
-                        <a href="/orderdetails" className="text-truncate h-100 d-flex align-items-center">1397</a>
+                        <a href="/orderadmin-view-order" className="text-truncate h-100 d-flex align-items-center">1397</a>
                       </div>
                       <div className="col-6 col-md-3 d-flex flex-column justify-content-center mb-2 mb-md-0 order-3 order-md-2">
                         <div className="text-muted text-small d-md-none">Name</div>
@@ -203,19 +271,19 @@ function OrderList() {
                         <div className="text-muted text-small d-md-none">Price</div>
                         <div className="text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            128.25
+                            <span className="text-small">₹</span>
+                            2,128.25
                           </span>
                         </div>
                       </div>
                       <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-5 order-md-4">
                         <div className="text-muted text-small d-md-none">Date</div>
-                        <div className="text-alternate">17.09.2020</div>
+                        <div className="text-alternate">18.09.2020</div>
                       </div>
                       <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-last order-md-5">
                         <div className="text-muted text-small d-md-none">Status</div>
                         <div className="text-alternate">
-                          <span className="badge rounded-pill bg-outline-primary">CONFIRMED</span>
+                          <span className="badge rounded-pill bg-secondary">SHIPPED</span>
                         </div>
                       </div>
                     </div>
@@ -226,29 +294,29 @@ function OrderList() {
                     <div className="row g-0 h-100 align-content-center">
                       <div className="col-11 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-1 order-md-1 h-md-100 position-relative">
                         <div className="text-muted text-small d-md-none">Id</div>
-                        <a href="/orderdetails" className="text-truncate h-100 d-flex align-items-center">1397</a>
+                        <a href="/orderadmin-view-order" className="text-truncate h-100 d-flex align-items-center">1420</a>
                       </div>
                       <div className="col-6 col-md-3 d-flex flex-column justify-content-center mb-2 mb-md-0 order-3 order-md-2">
                         <div className="text-muted text-small d-md-none">Name</div>
-                        <div className="text-alternate">Blaine Cottrell</div>
+                        <div className="text-alternate">Aby William</div>
                       </div>
                       <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-4 order-md-3">
                         <div className="text-muted text-small d-md-none">Price</div>
                         <div className="text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            128.25
+                            <span className="text-small">₹</span>
+                            6,128.25
                           </span>
                         </div>
                       </div>
                       <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-5 order-md-4">
                         <div className="text-muted text-small d-md-none">Date</div>
-                        <div className="text-alternate">17.09.2020</div>
+                        <div className="text-alternate">19.09.2020</div>
                       </div>
                       <div className="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-last order-md-5">
                         <div className="text-muted text-small d-md-none">Status</div>
                         <div className="text-alternate">
-                          <span className="badge rounded-pill bg-outline-primary">CONFIRMED</span>
+                          <span className="badge rounded-pill bg-primary">DELIVERED</span>
                         </div>
                       </div>
                     </div>

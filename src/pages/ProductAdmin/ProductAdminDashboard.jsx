@@ -13,7 +13,7 @@ function ProductAdminDashboard() {
                 <a className="muted-link pb-2 d-inline-block hidden" href="#">
                   <span className="align-middle lh-1 text-small">&nbsp;</span>
                 </a>
-                <h1 className="mb-0 pb-0 display-4" id="title">Welcome, Product admin!</h1>
+                <h1 className="mb-0 pb-0 display-4" id="title">Welcome Henry, Product admin!</h1>
               </div>
               {/* <!-- Title End --> */}
             </div>
@@ -48,7 +48,7 @@ function ProductAdminDashboard() {
                           <i data-acorn-icon="dollar" className="text-primary"></i>
                         </div>
                         <div className="mb-1 d-flex align-items-center text-alternate text-small lh-1-25">EARNINGS</div>
-                        <div className="text-primary cta-4">$ 315.20</div>
+                        <div className="text-primary cta-4">₹ 31555.20</div>
                       </div>
                     </div>
                   </div>
@@ -130,7 +130,7 @@ function ProductAdminDashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
+                            <span className="text-small">₹</span>
                             17.35
                           </span>
                         </div>
@@ -149,8 +149,8 @@ function ProductAdminDashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            145.20
+                            <span className="text-small">₹</span>
+                            1455.20
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Today - 11:32</div>
@@ -168,8 +168,8 @@ function ProductAdminDashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            110.85
+                            <span className="text-small">₹</span>
+                            1105.85
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Today - 11:20</div>
@@ -187,8 +187,8 @@ function ProductAdminDashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            58.00
+                            <span className="text-small">₹</span>
+                            558.00
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Today - 10:20</div>
@@ -206,8 +206,8 @@ function ProductAdminDashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            22.05
+                            <span className="text-small">₹</span>
+                            622.05
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Today - 07:30</div>
@@ -226,8 +226,8 @@ function ProductAdminDashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            14.25
+                            <span className="text-small">₹</span>
+                            914.25
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Monday - 17:30</div>
@@ -246,8 +246,8 @@ function ProductAdminDashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            42.00
+                            <span className="text-small">₹</span>
+                            1142.00
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Monday - 11:25</div>
@@ -266,8 +266,8 @@ function ProductAdminDashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            63.25
+                            <span className="text-small">₹</span>
+                            1163.25
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Monday - 15:20</div>
@@ -286,8 +286,8 @@ function ProductAdminDashboard() {
                         </div>
                         <div className="col-12 col-md-2 d-flex align-items-center mb-1 mb-md-0 text-alternate">
                           <span>
-                            <span className="text-small">$</span>
-                            74.00
+                            <span className="text-small">₹</span>
+                            10074.00
                           </span>
                         </div>
                         <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end mb-1 mb-md-0 text-alternate">Monday - 13:10</div>
@@ -351,14 +351,14 @@ function ProductAdminDashboard() {
                     <div className="row g-0 sh-14 sh-md-10">
                       <div className="col-auto">
                         <a href="Products.Detail.html">
-                          <img src="img/product/small/product-3.webp" alt="alternate text" className="card-img card-img-horizontal sw-11" />
+                          <img src="img/product/Salwar.webp" alt="alternate text" className="card-img card-img-horizontal sw-11 sh-md-10" />
                         </a>
                       </div>
                       <div className="col">
                         <div className="card-body pt-0 pb-0 h-100">
                           <div className="row g-0 h-100 align-content-center">
                             <div className="col-12 col-md-9 d-flex align-items-center mb-2 mb-md-0">
-                              <a href="Products.Detail.html">Good Glass Teapot</a>
+                              <a href="Products.Detail.html">Salwar</a>
                             </div>
                             <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end text-muted text-medium">4.024 Sales</div>
                           </div>
@@ -370,14 +370,14 @@ function ProductAdminDashboard() {
                     <div className="row g-0 sh-14 sh-md-10">
                       <div className="col-auto">
                         <a href="Products.Detail.html">
-                          <img src="img/product/small/product-2.webp" alt="alternate text" className="card-img card-img-horizontal sw-11" />
+                          <img src="img/product/plazzo-salwar-suit.webp" alt="alternate text" className="card-img card-img-horizontal sw-11 sh-md-10" />
                         </a>
                       </div>
                       <div className="col">
                         <div className="card-body pt-0 pb-0 h-100">
                           <div className="row g-0 h-100 align-content-center">
                             <div className="col-12 col-md-9 d-flex align-items-center mb-2 mb-md-0">
-                              <a href="Products.Detail.html">Aromatic Green Candle</a>
+                              <a href="Products.Detail.html">Plazzo Salwar</a>
                             </div>
                             <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end text-muted text-medium">2.701 Sales</div>
                           </div>
@@ -389,14 +389,14 @@ function ProductAdminDashboard() {
                     <div className="row g-0 sh-14 sh-md-10">
                       <div className="col-auto">
                         <a href="Products.Detail.html">
-                          <img src="img/product/small/product-7.webp" alt="alternate text" className="card-img card-img-horizontal sw-11" />
+                          <img src="img/product/Punjabi-salwar-suit-4-.webp" alt="alternate text" className="card-img card-img-horizontal sw-11 sh-md-10" />
                         </a>
                       </div>
                       <div className="col">
                         <div className="card-body pt-0 pb-0 h-100">
                           <div className="row g-0 h-100 align-content-center">
                             <div className="col-12 col-md-9 d-flex align-items-center mb-2 mb-md-0">
-                              <a href="Products.Detail.html">White Coffee Mug</a>
+                              <a href="Products.Detail.html">Punjabi Salwar</a>
                             </div>
                             <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end text-muted text-medium">1.972 Sales</div>
                           </div>
@@ -408,14 +408,14 @@ function ProductAdminDashboard() {
                     <div className="row g-0 sh-14 sh-md-10">
                       <div className="col-auto">
                         <a href="Products.Detail.html">
-                          <img src="img/product/small/product-6.webp" alt="alternate text" className="card-img card-img-horizontal sw-11" />
+                          <img src="img/product/Georgette-And-Satin-Designer-Saree-In-Dark-Pink-Colour-SR1542337-A.webp" alt="alternate text" className="card-img card-img-horizontal sw-11 sh-md-10" />
                         </a>
                       </div>
                       <div className="col">
                         <div className="card-body pt-0 pb-0 h-100">
                           <div className="row g-0 h-100 align-content-center">
                             <div className="col-12 col-md-9 d-flex align-items-center mb-2 mb-md-0">
-                              <a href="Products.Detail.html">Wireless On-Ear Headphones</a>
+                              <a href="Products.Detail.html">Saree</a>
                             </div>
                             <div className="col-12 col-md-3 d-flex align-items-center justify-content-md-end text-muted text-medium">1.543 Sales</div>
                           </div>
@@ -455,7 +455,7 @@ function ProductAdminDashboard() {
                   <div className="scroll h-100">
                     <div className="d-flex flex-row align-items-center justify-content-between mb-2">
                       <div className="d-flex flex-column">
-                        <div>Whole wheat bread</div>
+                        <div>Anarkali salwar suit</div>
                       </div>
                       <div className="d-flex">
                         <span className="badge bg-outline-secondary">847</span>
@@ -463,7 +463,7 @@ function ProductAdminDashboard() {
                     </div>
                     <div className="d-flex flex-row align-items-center justify-content-between mb-2">
                       <div className="d-flex flex-column">
-                        <div>White bread</div>
+                        <div>Sharara Suit</div>
                       </div>
                       <div className="d-flex">
                         <span className="badge bg-outline-secondary">753</span>
@@ -471,7 +471,7 @@ function ProductAdminDashboard() {
                     </div>
                     <div className="d-flex flex-row align-items-center justify-content-between mb-2">
                       <div className="d-flex flex-column">
-                        <div>Sourdough bread</div>
+                        <div>Palazzo Salwar Suit</div>
                       </div>
                       <div className="d-flex">
                         <span className="badge bg-outline-secondary">721</span>
@@ -479,7 +479,7 @@ function ProductAdminDashboard() {
                     </div>
                     <div className="d-flex flex-row align-items-center justify-content-between mb-2">
                       <div className="d-flex flex-column">
-                        <div>Melonpan bread</div>
+                        <div>Afghani salwars</div>
                       </div>
                       <div className="d-flex">
                         <span className="badge bg-outline-secondary">693</span>
@@ -487,7 +487,7 @@ function ProductAdminDashboard() {
                     </div>
                     <div className="d-flex flex-row align-items-center justify-content-between mb-2">
                       <div className="d-flex flex-column">
-                        <div>Gluten free bread</div>
+                        <div>Sharara Suit</div>
                       </div>
                       <div className="d-flex">
                         <span className="badge bg-outline-secondary">431</span>
@@ -495,7 +495,7 @@ function ProductAdminDashboard() {
                     </div>
                     <div className="d-flex flex-row align-items-center justify-content-between mb-2">
                       <div className="d-flex flex-column">
-                        <div>sliced whole wheat bread</div>
+                        <div>Kanjivaram Silk Saree</div>
                       </div>
                       <div className="d-flex">
                         <span className="badge bg-outline-secondary">381</span>
@@ -503,7 +503,7 @@ function ProductAdminDashboard() {
                     </div>
                     <div className="d-flex flex-row align-items-center justify-content-between mb-2">
                       <div className="d-flex flex-column">
-                        <div>Packaged Zopf bread</div>
+                        <div>Banarasi Saree</div>
                       </div>
                       <div className="d-flex">
                         <span className="badge bg-outline-secondary">310</span>
@@ -511,7 +511,7 @@ function ProductAdminDashboard() {
                     </div>
                     <div className="d-flex flex-row align-items-center justify-content-between mb-2">
                       <div className="d-flex flex-column">
-                        <div>Barm cake</div>
+                        <div>Bomkai Saree</div>
                       </div>
                       <div className="d-flex">
                         <span className="badge bg-outline-secondary">301</span>
@@ -519,7 +519,7 @@ function ProductAdminDashboard() {
                     </div>
                     <div className="d-flex flex-row align-items-center justify-content-between mb-2">
                       <div className="d-flex flex-column">
-                        <div>Pita bread</div>
+                        <div>Chanderi Saree</div>
                       </div>
                       <div className="d-flex">
                         <span className="badge bg-outline-secondary">288</span>
@@ -527,7 +527,7 @@ function ProductAdminDashboard() {
                     </div>
                     <div className="d-flex flex-row align-items-center justify-content-between mb-2">
                       <div className="d-flex flex-column">
-                        <div>Taftan cake</div>
+                        <div>Nauvari Saree</div>
                       </div>
                       <div className="d-flex">
                         <span className="badge bg-outline-secondary">219</span>
@@ -604,7 +604,7 @@ function ProductAdminDashboard() {
                               <div className="d-flex flex-column">
                                 <div className="text-alternate mt-n1 lh-1-25">
                                   Product out of stock:
-                                  <a href="#" className="alternate-link underline-link">Breadstick</a>
+                                  <a href="#" className="alternate-link underline-link">Nauvari Saree</a>
                                 </div>
                               </div>
                             </div>
@@ -670,7 +670,7 @@ function ProductAdminDashboard() {
                               <div className="d-flex flex-column">
                                 <div className="text-alternate mt-n1 lh-1-25">
                                   New sale:
-                                  <a href="#" className="alternate-link underline-link">Steirer Brot</a>
+                                  <a href="#" className="alternate-link underline-link">Plazzo salwar</a>
                                 </div>
                               </div>
                             </div>
@@ -694,7 +694,7 @@ function ProductAdminDashboard() {
                               <div className="d-flex flex-column">
                                 <div className="text-alternate mt-n1 lh-1-25">
                                   New sale:
-                                  <a href="#" className="alternate-link underline-link">Soda Bread</a>
+                                  <a href="#" className="alternate-link underline-link">Anarakali Salwar</a>
                                 </div>
                               </div>
                             </div>
@@ -739,7 +739,7 @@ function ProductAdminDashboard() {
                               <div className="d-flex flex-column">
                                 <div className="text-alternate mt-n1 lh-1-25">
                                   New sale:
-                                  <a href="#" className="alternate-link underline-link">Cholermüs</a>
+                                  <a href="#" className="alternate-link underline-link">Punjabi Salwar</a>
                                 </div>
                               </div>
                             </div>
@@ -763,7 +763,7 @@ function ProductAdminDashboard() {
                               <div className="d-flex flex-column">
                                 <div className="text-alternate mt-n1 lh-1-25">
                                   New sale:
-                                  <a href="#" className="alternate-link underline-link">Bazlama</a>
+                                  <a href="#" className="alternate-link underline-link">Kalankari Saree</a>
                                 </div>
                               </div>
                             </div>
@@ -829,7 +829,7 @@ function ProductAdminDashboard() {
                               <div className="d-flex flex-column">
                                 <div className="text-alternate mt-n1 lh-1-25">
                                   New sale:
-                                  <a href="#" className="alternate-link underline-link">Bazlama</a>
+                                  <a href="#" className="alternate-link underline-link">Kanjipuram Saree</a>
                                 </div>
                               </div>
                             </div>
@@ -876,18 +876,17 @@ function ProductAdminDashboard() {
                         <div className="row g-0 sh-10 mb-3">
                           <div className="col-auto">
                             <a href="Products.Detail.html">
-                              <img src="img/product/small/product-2.webp" className="card-img rounded-md h-100 sw-8" alt="thumb" />
+                              <img src="img/product/Salwar.webp" className="card-img rounded-md h-100 sw-8" alt="thumb" />
                             </a>
                           </div>
                           <div className="col">
                             <div className="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-0 h-100 justify-content-center">
                               <div className="d-flex flex-column">
                                 <div className="mb-1">
-                                  <a href="Customers.Detail.html" className="body-link">Kathleen Bertha</a>
+                                  <a href="Customers.Detail.html" className="body-link">Achara</a>
                                 </div>
                                 <div className="text-small text-muted text-truncate mb-1">
-                                  Chocolate bar marzipan marzipan carrot cake gingerbread pastry ice cream. Ice cream danish sugar plum biscuit pudding powder
-                                  soufflé donut macaroon.
+                                  Amazing product..
                                 </div>
                                 <div className="br-wrapper br-theme-cs-icon">
                                   <select className="rating" name="rating" autocomplete="off" data-readonly="true" data-initial-rating="5">
@@ -905,7 +904,7 @@ function ProductAdminDashboard() {
                         <div className="row g-0 sh-10 mb-3">
                           <div className="col-auto">
                             <a href="Products.Detail.html">
-                              <img src="img/product/small/product-3.webp" className="card-img rounded-md h-100 sw-8" alt="thumb" />
+                              <img src="img/product/plazzo-salwar-suit.webp" className="card-img rounded-md h-100 sw-8" alt="thumb" />
                             </a>
                           </div>
                           <div className="col">
@@ -914,7 +913,7 @@ function ProductAdminDashboard() {
                                 <div className="mb-1">
                                   <a href="Customers.Detail.html" className="body-link">Kathleen Bertha</a>
                                 </div>
-                                <div className="text-small text-muted text-truncate mb-1">Bear claw sweet liquorice jujubes. Muffin gingerbread bear claw.</div>
+                                <div className="text-small text-muted text-truncate mb-1">Nice product, i loved it</div>
                                 <div className="br-wrapper br-theme-cs-icon">
                                   <select className="rating" name="rating" autocomplete="off" data-readonly="true" data-initial-rating="5">
                                     <option value="1">1</option>
@@ -931,7 +930,7 @@ function ProductAdminDashboard() {
                         <div className="row g-0 sh-10 mb-3">
                           <div className="col-auto">
                             <a href="Products.Detail.html">
-                              <img src="img/product/small/product-1.webp" className="card-img rounded-md h-100 sw-8" alt="thumb" />
+                              <img src="img/product/Punjabi-salwar-suit-4-.webp" className="card-img rounded-md h-100 sw-8" alt="thumb" />
                             </a>
                           </div>
                           <div className="col">
@@ -957,7 +956,7 @@ function ProductAdminDashboard() {
                         <div className="row g-0 sh-10">
                           <div className="col-auto">
                             <a href="Products.Detail.html">
-                              <img src="img/product/small/product-10.webp" className="card-img rounded-md h-100 sw-8" alt="thumb" />
+                              <img src="img/product/Salwar.webp" className="card-img rounded-md h-100 sw-8" alt="thumb" />
                             </a>
                           </div>
                           <div className="col">

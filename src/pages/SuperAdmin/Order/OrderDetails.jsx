@@ -1,6 +1,20 @@
-import React from 'react'
+import {React, useState} from 'react'
+import '../../SuperAdmin/Customer/Review.css'
+
 import logo from '../../../images/logo/logo1-black.png'
 function OrderDetails() {
+  const [showReplyForm, setShowReplyForm] = useState(false);
+  const [selectedReview, setSelectedReview] = useState(null);
+
+  const toggleReplyForm = () => {
+    setShowReplyForm(!showReplyForm);
+  };
+
+  const showReplyPopup = (reviewId) => {
+    setSelectedReview(reviewId);
+    setShowReplyForm(true);
+  };
+
 
   const handlePrint = () => {
       
@@ -184,13 +198,13 @@ function OrderDetails() {
       <body>
         <header>
           <h1>Invoice</h1>
-          <address>
-            <p contenteditable>Jonathan Neal</p>
-            <p contenteditable>William Chapman</p>
-                    <p contenteditable>Orange, CA 92866</p>
-            <p contenteditable>(800) 555-1234</p>
+          <address><p contenteditable>Henry</p>
+                    <p contenteditable>HAK Collections</p>
+                    <p contenteditable>Temple Road, Chalad</p>
+                    <p contenteditable>Kannur 670014</p>
+            <p contenteditable>+919995173402</p>
           </address>
-          <span><img src=${logo} height="10%" width="100%" style="margin-right: -70px;"/></span>
+          <span><img src=${logo} height="10%" width="100%" style="margin-right: 0px;"/></span>
         </header>
         <article>
           <!-- <h1>Recipient</h1>
@@ -219,10 +233,38 @@ function OrderDetails() {
             <tbody>
               <tr>
                             <!-- <a class="cut">-</a> -->
-                <td><span>Plazzo salwar</span></td>
-                <td><span data-prefix>₹</span><span>1200.00</span></td>
+                <td><span>Raivat organza punjabi salwar</span></td>
+                <td><span data-prefix>₹</span><span>899.00</span></td>
+                <td><span>1</span></td>
+                <td><span data-prefix>₹</span><span>899.00</span></td>
+              </tr>
+              <tr>
+                            <!-- <a class="cut">-</a> -->
+                <td><span>Heavy georgette plazzo salwar</span></td>
+                <td><span data-prefix>₹</span><span>999.00</span></td>
                 <td><span>2</span></td>
-                <td><span data-prefix>₹</span><span>2400.00</span></td>
+                <td><span data-prefix>₹</span><span>1998.00</span></td>
+              </tr>
+              <tr>
+                            <!-- <a class="cut">-</a> -->
+                <td><span>Woven silkblnd banarasi saree</span></td>
+                <td><span data-prefix>₹</span><span>1899.00</span></td>
+                <td><span>1</span></td>
+                <td><span data-prefix>₹</span><span>1899.00</span></td>
+              </tr>
+              <tr>
+                            <!-- <a class="cut">-</a> -->
+                <td><span>Poly wrinkle mix pant n top</span></td>
+                <td><span data-prefix>₹</span><span>1499.00</span></td>
+                <td><span>1</span></td>
+                <td><span data-prefix>₹</span><span>1499.00</span></td>
+              </tr>
+              <tr>
+                            <!-- <a class="cut">-</a> -->
+                <td><span>Georgette frock kurti</span></td>
+                <td><span data-prefix>₹</span><span>699.00</span></td>
+                <td><span>2</span></td>
+                <td><span data-prefix>₹</span><span>1398.00</span></td>
               </tr>
             </tbody>
           </table>
@@ -230,19 +272,19 @@ function OrderDetails() {
           <table class="balance">
             <tr>
               <th><span>Subtotal</span></th>
-              <td><span data-prefix>₹</span><span>2400.00</span></td>
+              <td><span data-prefix>₹</span><span>7,693.00</span></td>
             </tr>
             <tr>
-              <th><span>Shipping & Handling</span></th>
-              <td><span data-prefix>₹</span><span>0.00</span></td>
+              <th><span>GST 2%</span></th>
+              <td><span data-prefix>₹</span><span>76.93</span></td>
             </tr>
             <tr>
-              <th><span>GST</span></th>
+              <th><span>Shipping charge</span></th>
               <td><span data-prefix>₹</span><span>100.00</span></td>
             </tr>
             <tr>
               <th><span style="font-weight: bold;">Grand Total</span></th>
-              <td><span data-prefix style="font-weight: bold;">₹</span><span style="font-weight: bold;">2500.00</span></td>
+              <td><span data-prefix style="font-weight: bold;">₹</span><span style="font-weight: bold;">7,870.00</span></td>
             </tr>
           </table>
         </article>
@@ -263,22 +305,24 @@ function OrderDetails() {
                                 <!-- <a class="cut">-</a> -->
                                 <td>
                                     <address>
-                                        <p>Jonathan Neal</p>
-                                        <p>William Chapman</p>
-                                        <p>Orange, CA 92866</p>
-                                        <p>(800) 555-1234</p>
+                                        <p>
+Amelia Earhart</p>
+                                        <p>4 Glamis Avenue, Strathmore</p>
+                                        <p> Wellington 6022, New Zealand</p>
+                                        <p>+6443884455</p>
                                     </address>
                                 </td>
                                 <td><p>Flat Rate - Fixed</p></td>
                                 <td>
                                     <address>
-                                        <p>Jonathan Neal</p>
-                                        <p>William Chapman</p>
-                                        <p>Orange, CA 92866</p>
-                                        <p>(800) 555-1234</p>
+                                        <p>
+Amelia Earhart</p>
+                                        <p>4 Glamis Avenue, Strathmore</p>
+                                        <p> Wellington 6022, New Zealand</p>
+                                        <p>+6443884455</p>
                                     </address>
                                 </td>
-                                <td>Check / Money order</td>
+                                <td><p>Credit Card</p><br><p>3452 42** **** 4251</p></td>
                             </tr>
                         </tbody>
                     </table>
@@ -400,7 +444,7 @@ function OrderDetails() {
             <h2>Dispatch Note</h2>
             <div class="dispatch-info">
                 <label>Order ID:</label>
-                <p>123456</p>
+                <p>1225</p>
             </div>
             <div class="dispatch-info">
                 <label>Date:</label>
@@ -408,23 +452,25 @@ function OrderDetails() {
             </div>
             <div class="dispatch-info">
                 <label>Recipient Name:</label>
-                <p>John Doe</p>
+                <p>Amelia Earhart</p>
             </div>
             <div class="dispatch-info">
                 <label>Shipping Address:</label>
-                <p>123 Main St, Anytown, USA</p>
+                <p>4 Glamis Avenue, Strathmore</p><p>Wellington 6022, New Zealand</p>
             </div>
             <div class="dispatch-info">
                 <label>Items:</label>
                 <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
+                    <li>1. Raivat organza punjabi salwar</li>
+                    <li>2. Heavy georgette plazzo salwar</li>
+                    <li>3. Woven silkblnd banarasi saree</li>
+                    <li>4. Poly wrinkle mix pant n top</li>
+                    <li>5. Georgette frock kurti</li>
                 </ul>
             </div>
             <div class="dispatch-info">
                 <label>Notes:</label>
-                <p>This is a sample dispatch note.</p>
+                <p>dispatch notes.</p>
             </div>
             <button type='button' class="print_button" onclick="printDispatch()">Print</button>
         </div>
@@ -473,11 +519,11 @@ function OrderDetails() {
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
                     <span className="text-medium align-middle">Back</span>
                   </a>
-                  <h1 className="mb-0 pb-0 display-4 sw-40" id="title">Order Detail: #order_id</h1>
+                  <h1 className="mb-0 pb-0 display-4 sw-40" id="title">Order Detail</h1>
                 </div>
               </div>
               {/* <!-- Title End --> */}
-                              {/* <!-- Top Buttons Start --> */}
+             {/* <!-- Top Buttons Start --> */}
              <div className="w-100 d-md-none"></div>
               <div className="col-12 col-sm-6 col-md-auto d-flex align-items-end justify-content-end mb-2 mb-sm-0 order-sm-3">
                 <button type="button" className="btn btn-outline-primary btn-icon btn-icon-start ms-0 ms-sm-1 w-100 w-md-auto" onClick={handlePrint}>
@@ -495,7 +541,7 @@ function OrderDetails() {
           <div className="row gx-4 gy-5">
             <div className="col-12 col-xl-8 col-xxl-9 mb-n5">
               {/* <!-- Status Start --> */}
-              {/* <h2 className="small-title">Status</h2>
+              <h2 className="small-title">Status</h2>
               <div className="mb-5">
                 <div className="row g-2">
                   <div className="col-12 col-sm-6 col-lg-6">
@@ -508,7 +554,7 @@ function OrderDetails() {
                         </div>
                         <div className="col">
                           <div className="d-flex align-items-center lh-1-25">Order Id</div>
-                          <div className="text-primary">2241</div>
+                          <div className="text-primary">1225</div>
                         </div>
                       </div>
                     </div>
@@ -523,7 +569,7 @@ function OrderDetails() {
                         </div>
                         <div className="col">
                           <div className="d-flex align-items-center lh-1-25">Order Status</div>
-                          <div className="text-primary">Delivered</div>
+                          <div className="text-primary">Confirmed</div>
                         </div>
                         <div class="col-auto ds-flex" data-bs-toggle="modal" data-bs-target="#orderStatusUpdate">
                           <button class="btn btn-sm btn-icon btn-icon btn-icon-only btn-outline-primary" type="button">
@@ -543,7 +589,7 @@ function OrderDetails() {
                         </div>
                         <div className="col">
                           <div className="d-flex align-items-center lh-1-25">Delivery Date</div>
-                          <div className="text-primary">17.11.2020</div>
+                          <div className="text-primary">08.02.2024</div>
                         </div>
                         <div class="col-auto ds-flex" data-bs-toggle="modal" data-bs-target="#deliveryDateUpdate">
                           <button class="btn btn-sm btn-icon btn-icon btn-icon-only btn-outline-primary" type="button">
@@ -565,11 +611,16 @@ function OrderDetails() {
                           <div className="d-flex align-items-center lh-1-25">Tracking Code</div>
                           <div className="text-primary">US4244290109</div>
                         </div>
+                        <div class="col-auto ds-flex" data-bs-toggle="modal" data-bs-target="#trackCode">
+                          <button class="btn btn-sm btn-icon btn-icon btn-icon-only btn-outline-primary" type="button">
+                            <i className="fa-solid fa-pen"></i>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div> */}
+              </div> 
               {/* <!-- Status End --> */}
 
               {/* <!-- Cart Start --> */}
@@ -579,16 +630,17 @@ function OrderDetails() {
                   <div className="row">
                     <div className="col-12">
                       <div className="mb-5">
-                        <div className="row g-0 sh-9 mb-3">
+                        <div className="row g-0 sh-18 mb-3">
                           <div className="col-auto">
-                            <img src="img/product/Punjabi-salwar-suit-4-.webp" className="card-img rounded-md h-100 sw-13 sh-9" alt="thumb" />
+                            <img src="img/product/Punjabi-salwar-suit-4-.webp" className="card-img rounded-md h-100 sw-13 sh-18" alt="thumb" />
                           </div>
                           <div className="col">
                             <div className="ps-4 pt-0 pb-0 pe-0 h-100">
                               <div className="row g-0 h-100 align-items-start align-content-center">
                                 <div className="col-12 d-flex flex-column mb-2">
-                                  <div>Punjabi salwar</div>
-                                  {/* <div className="text-muted text-small">Microsoft</div> */}
+                                  <div>Raivat organza Punjabi salwar</div>
+                                  <div className="text-muted text-medium">Punjabi Salwar</div>
+                                  <div className="text-muted text-medium">SL11983</div>
                                 </div>
                                 <div className="col-12 d-flex flex-column mb-md-0 pt-1">
                                   <div className="row g-0">
@@ -597,13 +649,13 @@ function OrderDetails() {
                                       <span className="text-muted ms-1 me-1">x</span>
                                       <span>
                                         <span className="text-small">₹</span>
-                                        1000
+                                        899.00
                                       </span>
                                     </div>
                                     <div className="col-6 d-flex flex-row align-items-end justify-content-end text-alternate">
                                       <span>
                                         <span className="text-small">₹</span>
-                                        1000
+                                        899.00
                                       </span>
                                     </div>
                                   </div>
@@ -612,16 +664,17 @@ function OrderDetails() {
                             </div>
                           </div>
                         </div>
-                        <div className="row g-0 sh-9 mb-3">
+                        <div className="row g-0 sh-18 mb-3">
                           <div className="col-auto">
-                            <img src="img/product/Salwar.webp" className="card-img rounded-md h-100 sw-13 sh-9" alt="thumb" />
+                            <img src="img/product/Salwar.webp" className="card-img rounded-md h-100 sw-13 sh-18" alt="thumb" />
                           </div>
                           <div className="col">
                             <div className="ps-4 pt-0 pb-0 pe-0 h-100">
                               <div className="row g-0 h-100 align-items-start align-content-center">
                                 <div className="col-12 d-flex flex-column mb-2">
-                                  <div>Anarkali salwar</div>
-                                  {/* <div className="text-muted text-small">Ikea</div> */}
+                                  <div>Heavy Georgette Plazzo Salwar</div>
+                                  <div className="text-muted text-medium">Plazzo Salwar</div>
+                                  <div className="text-muted text-medium">SL11928</div>
                                 </div>
                                 <div className="col-12 d-flex flex-column mb-md-0 pt-1">
                                   <div className="row g-0">
@@ -630,13 +683,13 @@ function OrderDetails() {
                                       <span className="text-muted ms-1 me-1">x</span>
                                       <span>
                                         <span className="text-small">₹</span>
-                                        800
+                                        999.00
                                       </span>
                                     </div>
                                     <div className="col-6 d-flex flex-row align-items-end justify-content-end text-alternate">
                                       <span>
                                         <span className="text-small">₹</span>
-                                        1600
+                                        1998.00
                                       </span>
                                     </div>
                                   </div>
@@ -645,16 +698,17 @@ function OrderDetails() {
                             </div>
                           </div>
                         </div>
-                        <div className="row g-0 sh-9 mb-3">
+                        <div className="row g-0 sh-18 mb-3">
                           <div className="col-auto">
-                            <img src="img/product/plazzo-salwar-suit.webp" className="card-img rounded-md h-100 sw-13 sh-9" alt="thumb" />
+                            <img src="img/product/Banarasi-Cream1.jpg" className="card-img rounded-md h-100 sw-13 sh-18" alt="thumb" />
                           </div>
                           <div className="col">
                             <div className="ps-4 pt-0 pb-0 pe-0 h-100">
                               <div className="row g-0 h-100 align-items-start align-content-center">
                                 <div className="col-12 d-flex flex-column mb-2">
-                                  <div>Plazzo salwar</div>
-                                  {/* <div className="text-muted text-small">Sony</div> */}
+                                  <div>Woven Design Zari Silk Blend Banarasi Saree</div>
+                                  <div className="text-muted text-medium">Banarasi Saree</div>
+                                  <div className="text-muted text-medium">SR13567</div>
                                 </div>
                                 <div className="col-12 d-flex flex-column mb-md-0 pt-1">
                                   <div className="row g-0">
@@ -663,13 +717,81 @@ function OrderDetails() {
                                       <span className="text-muted ms-1 me-1">x</span>
                                       <span>
                                         <span className="text-small">₹</span>
-                                        1200
+                                        1899.00
                                       </span>
                                     </div>
                                     <div className="col-6 d-flex flex-row align-items-end justify-content-end text-alternate">
                                       <span>
                                         <span className="text-small">₹</span>
-                                        1200
+                                        1899.00
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="row g-0 sh-18 mb-3">
+                          <div className="col-auto">
+                            <img src="img/product/pant and top.jpg" className="card-img rounded-md h-100 sw-13 sh-18" alt="thumb" />
+                          </div>
+                          <div className="col">
+                            <div className="ps-4 pt-0 pb-0 pe-0 h-100">
+                              <div className="row g-0 h-100 align-items-start align-content-center">
+                                <div className="col-12 d-flex flex-column mb-2">
+                                  <div>Poly Wrinkle Georgette Mix Pant And Top</div>
+                                  <div className="text-muted text-medium">Pant n Top</div>
+                                  <div className="text-muted text-medium">PT13578</div>
+                                </div>
+                                <div className="col-12 d-flex flex-column mb-md-0 pt-1">
+                                  <div className="row g-0">
+                                    <div className="col-6 d-flex flex-row pe-2 align-items-end text-alternate">
+                                      <span>1</span>
+                                      <span className="text-muted ms-1 me-1">x</span>
+                                      <span>
+                                        <span className="text-small">₹</span>
+                                        1499.00
+                                      </span>
+                                    </div>
+                                    <div className="col-6 d-flex flex-row align-items-end justify-content-end text-alternate">
+                                      <span>
+                                        <span className="text-small">₹</span>
+                                        1499.00
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="row g-0 sh-18 mb-3">
+                          <div className="col-auto">
+                            <img src="img/product/Kurta.webp" className="card-img rounded-md h-100 sw-13 sh-18" alt="thumb" />
+                          </div>
+                          <div className="col">
+                            <div className="ps-4 pt-0 pb-0 pe-0 h-100">
+                              <div className="row g-0 h-100 align-items-start align-content-center">
+                                <div className="col-12 d-flex flex-column mb-2">
+                                  <div>Georgette Frock Kurti</div>
+                                  <div className="text-muted text-medium">Frock Kurti</div>
+                                  <div className="text-muted text-medium">KT14678</div>
+                                </div>
+                                <div className="col-12 d-flex flex-column mb-md-0 pt-1">
+                                  <div className="row g-0">
+                                    <div className="col-6 d-flex flex-row pe-2 align-items-end text-alternate">
+                                      <span>2</span>
+                                      <span className="text-muted ms-1 me-1">x</span>
+                                      <span>
+                                        <span className="text-small">₹</span>
+                                        699.00
+                                      </span>
+                                    </div>
+                                    <div className="col-6 d-flex flex-row align-items-end justify-content-end text-alternate">
+                                      <span>
+                                        <span className="text-small">₹</span>
+                                        1398.00
                                       </span>
                                     </div>
                                   </div>
@@ -685,7 +807,16 @@ function OrderDetails() {
                           <div className="col-auto sw-13 text-end">
                             <span>
                               <span className="text-small text-muted">₹</span>
-                              3800
+                              7,693.00
+                            </span>
+                          </div>
+                        </div>
+                        <div className="row g-0 mb-2">
+                          <div className="col-auto ms-auto ps-3 text-muted">GST 1%</div>
+                          <div className="col-auto sw-13 text-end">
+                            <span>
+                              <span className="text-small text-muted">₹</span>
+                              76.93
                             </span>
                           </div>
                         </div>
@@ -694,11 +825,11 @@ function OrderDetails() {
                           <div className="col-auto sw-13 text-end">
                             <span>
                               <span className="text-small text-muted">₹</span>
-                              100
+                              100.00
                             </span>
                           </div>
                         </div>
-                        <div className="row g-0 mb-2">
+                        {/* <div className="row g-0 mb-2">
                           <div className="col-auto ms-auto ps-3 text-muted">Sale</div>
                           <div className="col-auto sw-13 text-end">
                             <span>
@@ -706,13 +837,13 @@ function OrderDetails() {
                               100
                             </span>
                           </div>
-                        </div>
+                        </div> */}
                         <div className="row g-0 mb-2">
                           <div className="col-auto ms-auto ps-3 text-muted">Grand Total</div>
                           <div className="col-auto sw-13 text-end">
                             <span>
                               <span className="text-small text-muted">₹</span>
-                              4000
+                              7,870.00
                             </span>
                           </div>
                         </div>
@@ -722,84 +853,6 @@ function OrderDetails() {
                 </div>
               </div>
               {/* <!-- Cart End --> */}
-
-              {/* <!-- Activity Start --> */}
-              {/* <h2 className="small-title">Activity</h2>
-              <div className="card mb-5">
-                <div className="card-body">
-                  <div className="row g-0">
-                    <div className="col-auto sw-1 d-flex flex-column justify-content-center align-items-center position-relative me-4">
-                      <div className="w-100 d-flex sh-1"></div>
-                      <div className="rounded-xl shadow d-flex flex-shrink-0 justify-content-center align-items-center">
-                        <div className="bg-gradient-light sw-1 sh-1 rounded-xl position-relative"></div>
-                      </div>
-                      <div className="w-100 d-flex h-100 justify-content-center position-relative">
-                        <div className="line-w-1 bg-separator h-100 position-absolute"></div>
-                      </div>
-                    </div>
-                    <div className="col mb-4">
-                      <div className="h-100">
-                        <div className="d-flex flex-column justify-content-start">
-                          <div className="d-flex flex-column">
-                            <a href="#" className="heading stretched-link">Order Received</a>
-                            <div className="text-alternate">21.11.2020</div>
-                            <div className="text-muted mt-1">Biscuit donut powder sugar plum pastry. Chupa chups topping pastry halvah.</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="row g-0">
-                    <div className="col-auto sw-1 d-flex flex-column justify-content-center align-items-center position-relative me-4">
-                      <div className="w-100 d-flex sh-1 position-relative justify-content-center">
-                        <div className="line-w-1 bg-separator h-100 position-absolute"></div>
-                      </div>
-                      <div className="rounded-xl shadow d-flex flex-shrink-0 justify-content-center align-items-center">
-                        <div className="bg-gradient-light sw-1 sh-1 rounded-xl position-relative"></div>
-                      </div>
-                      <div className="w-100 d-flex h-100 justify-content-center position-relative">
-                        <div className="line-w-1 bg-separator h-100 position-absolute"></div>
-                      </div>
-                    </div>
-                    <div className="col mb-4">
-                      <div className="h-100">
-                        <div className="d-flex flex-column justify-content-start">
-                          <div className="d-flex flex-column">
-                            <a href="#" className="heading stretched-link">Shipped</a>
-                            <div className="text-alternate">03.12.2020</div>
-                            <div className="text-muted mt-1">Apple pie cotton candy tiramisu biscuit cake muffin tootsie roll bear claw cake.</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="row g-0">
-                    <div className="col-auto sw-1 d-flex flex-column justify-content-center align-items-center position-relative me-4">
-                      <div className="w-100 d-flex sh-1 position-relative justify-content-center">
-                        <div className="line-w-1 bg-separator h-100 position-absolute"></div>
-                      </div>
-                      <div className="rounded-xl shadow d-flex flex-shrink-0 justify-content-center align-items-center">
-                        <div className="bg-gradient-light sw-1 sh-1 rounded-xl position-relative"></div>
-                      </div>
-                      <div className="w-100 d-flex h-100 justify-content-center position-relative"></div>
-                    </div>
-                    <div className="col">
-                      <div className="h-100">
-                        <div className="d-flex flex-column justify-content-start">
-                          <div className="d-flex flex-column">
-                            <a href="#" className="heading stretched-link pt-0">Delivered</a>
-                            <div className="text-alternate">09.12.2020</div>
-                            <div className="text-muted mt-1">
-                              Marzipan muffin cheesecake. Caramels wafer jelly beans. Icing pudding dessert caramels cake topping marzipan.
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-              {/* <!-- Activity End --> */}
             </div>
 
             {/* <!-- Address Start --> */}
@@ -808,14 +861,15 @@ function OrderDetails() {
               <div className="card mb-5">
                 <div className="card-body mb-n5">
                   <div className="mb-5">
-                    <p className="text-small text-muted mb-2">CUSTOMER</p>
+                    <p className="text-medium text-muted mb-2">CUSTOMER</p>
                     <div className="row g-0 mb-2">
                       <div className="col-auto">
                         <div className="sw-3 me-1">
                           <i data-acorn-icon="user" className="text-primary" data-acorn-size="17"></i>
                         </div>
                       </div>
-                      <div className="col text-alternate align-middle">Blaine Cottrell</div>
+                      <div className="col text-alternate align-middle">
+Amelia Earhart</div>
                     </div>
                     <div className="row g-0 mb-2">
                       <div className="col-auto">
@@ -823,19 +877,20 @@ function OrderDetails() {
                           <i data-acorn-icon="email" className="text-primary" data-acorn-size="17"></i>
                         </div>
                       </div>
-                      <div className="col text-alternate">blaine@cottrell.com</div>
+                      <div className="col text-alternate">AmeliaEarhart@gmail.com</div>
                     </div>
                   </div>
 
                   <div className="mb-5">
-                    <p className="text-small text-muted mb-2">SHIPPING ADDRESS</p>
+                    <p className="text-medium text-muted mb-2">SHIPPING ADDRESS</p>
                     <div className="row g-0 mb-2">
                       <div className="col-auto">
                         <div className="sw-3 me-1">
                           <i data-acorn-icon="user" className="text-primary" data-acorn-size="17"></i>
                         </div>
                       </div>
-                      <div className="col text-alternate align-middle">Blaine Cottrell</div>
+                      <div className="col text-alternate align-middle">
+Amelia Earhart</div>
                     </div>
                     <div className="row g-0 mb-2">
                       <div className="col-auto">
@@ -856,14 +911,15 @@ function OrderDetails() {
                   </div>
 
                   <div className="mb-5">
-                    <p className="text-small text-muted mb-2">BILLING ADDRESS</p>
+                    <p className="text-medium text-muted mb-2">BILLING ADDRESS</p>
                     <div className="row g-0 mb-2">
                       <div className="col-auto">
                         <div className="sw-3 me-1">
                           <i data-acorn-icon="user" className="text-primary" data-acorn-size="17"></i>
                         </div>
                       </div>
-                      <div className="col text-alternate align-middle">Blaine Cottrell</div>
+                      <div className="col text-alternate align-middle">
+Amelia Earhart</div>
                     </div>
                     <div className="row g-0 mb-2">
                       <div className="col-auto">
@@ -884,7 +940,7 @@ function OrderDetails() {
                   </div>
                   <div className="mb-5">
                     <div>
-                      <p className="text-small text-muted mb-2">PAYMENT (CREDIT CARD)</p>
+                      <p className="text-medium text-muted mb-2">PAYMENT (CREDIT CARD)</p>
                       <div className="row g-0 mb-2">
                         <div className="col-auto">
                           <div className="sw-3 me-1">
@@ -897,34 +953,140 @@ function OrderDetails() {
                   </div>
                 </div>
               </div>
+               {/* <!-- Activity Start --> */}
+              <h2 className="small-title">Activity</h2>
+              <div className="card mb-5">
+                <div className="card-body">
+                  <div className="row g-0">
+                    <div className="col-auto sw-1 d-flex flex-column justify-content-center align-items-center position-relative me-4">
+                      <div className="w-100 d-flex sh-1"></div>
+                      <div className="rounded-xl shadow d-flex flex-shrink-0 justify-content-center align-items-center">
+                        <div className="bg-gradient-light sw-1 sh-1 rounded-xl position-relative"></div>
+                      </div>
+                      <div className="w-100 d-flex h-100 justify-content-center position-relative">
+                        <div className="line-w-1 bg-separator h-100 position-absolute"></div>
+                      </div>
+                    </div>
+                    <div className="col mb-4">
+                      <div className="h-100">
+                        <div className="d-flex flex-column justify-content-start">
+                          <div className="d-flex flex-column">
+                            <a href="#" className="heading stretched-link">Order Received</a>
+                            <div className="text-alternate">05.02.2024</div>
+                            <div className="text-muted mt-1">ORDER ID: 1225</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row g-0">
+                    <div className="col-auto sw-1 d-flex flex-column justify-content-center align-items-center position-relative me-4">
+                      <div className="w-100 d-flex sh-1 position-relative justify-content-center">
+                        <div className="line-w-1 bg-separator h-100 position-absolute"></div>
+                      </div>
+                      <div className="rounded-xl shadow d-flex flex-shrink-0 justify-content-center align-items-center">
+                        <div className="bg-gradient-light sw-1 sh-1 rounded-xl position-relative"></div>
+                      </div>
+                      <div className="w-100 d-flex h-100 justify-content-center position-relative">
+                        <div className="line-w-1 bg-separator h-100 position-absolute"></div>
+                      </div>
+                    </div>
+                    <div className="col mb-4">
+                      <div className="h-100">
+                        <div className="d-flex flex-column justify-content-start">
+                          <div className="d-flex flex-column">
+                            <a href="#" className="heading stretched-link">Confirmed</a>
+                            <div className="text-alternate">05.02.2024</div>
+                            <div className="text-muted mt-1">ORDER ID: 1225</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row g-0">
+                    <div className="col-auto sw-1 d-flex flex-column justify-content-center align-items-center position-relative me-4">
+                      <div className="w-100 d-flex sh-1 position-relative justify-content-center">
+                        <div className="line-w-1 bg-separator h-100 position-absolute"></div>
+                      </div>
+                      <div className="rounded-xl shadow d-flex flex-shrink-0 justify-content-center align-items-center">
+                        <div className="bg-gradient sw-1 sh-1 rounded-xl position-relative"></div>
+                      </div>
+                      <div className="w-100 d-flex h-100 justify-content-center position-relative">
+                        <div className="line-w-1 bg-separator h-100 position-absolute"></div>
+                      </div>
+                    </div>
+                    <div className="col mb-4">
+                      <div className="h-100">
+                        <div className="d-flex flex-column justify-content-start">
+                          <div className="d-flex flex-column">
+                            <a href="#" className="heading checkbox">Shipped</a>
+                            <div className="text-alternate">Expected by 07.02.2024</div>
+                            <div className="text-muted mt-1">ORDER ID: 1225</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row g-0">
+                    <div className="col-auto sw-1 d-flex flex-column justify-content-center align-items-center position-relative me-4">
+                      <div className="w-100 d-flex sh-1 position-relative justify-content-center">
+                        <div className="line-w-1 bg-separator h-100 position-absolute"></div>
+                      </div>
+                      <div className="rounded-xl shadow d-flex flex-shrink-0 justify-content-center align-items-center">
+                        <div className="bg-gradient sw-1 sh-1 rounded-xl position-relative"></div>
+                      </div>
+                      <div className="w-100 d-flex h-100 justify-content-center position-relative"></div>
+                    </div>
+                    <div className="col">
+                      <div className="h-100">
+                        <div className="d-flex flex-column justify-content-start">
+                          <div className="d-flex flex-column">
+                            <a href="#" className="heading stretched-link pt-0">Delivered</a>
+                            <div className="text-alternate">Expected by 08.02.2024</div>
+                            <div className="text-muted mt-1">
+                              ORDER ID: 1225
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* <!-- Activity End --> */}
             </div>
             {/* <!-- Address End --> */}
+            
 
-            {/* <!-- Order Status Update Modal Start --> */}
+          {/* <!-- Order Status Update Modal Start --> */}
           <div className="modal modal-right fade" id="orderStatusUpdate" tabindex="-1" role="dialog" aria-hidden="true">
             <div className="modal-dialog">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h5 className="modal-title">Order Status Update</h5>
+                  <h5 className="modal-title">Order Status</h5>
                   <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div className="modal-body">
                   <form>
-                      <label className='form-label'>Status</label>
-                      <div className="form-check form-check-block">
+                      <label className='form-label'>Select Order Status</label>
+                      {/* <div className="form-check form-check-block">
                           <input type="radio" className="form-check-input" name="orderStatus"/>
                           <label className="form-check-label">Pending</label>
+                      </div> */}
+                      <div className="form-check form-check-block">
+                          <input type="checkbox" className="form-check-input" name="orderStatus"/>
+                          <label className="form-check-label">Confirmed</label>
                       </div>
                       <div className="form-check form-check-block">
-                          <input type="radio" className="form-check-input" name="orderStatus"/>
-                          <label className="form-check-label">Shipping</label>
+                          <input type="checkbox" className="form-check-input" name="orderStatus"/>
+                          <label className="form-check-label">Shipped</label>
                       </div>
                       <div className="form-check form-check-block">
-                          <input type="radio" className="form-check-input" name="orderStatus"/>
+                          <input type="checkbox" className="form-check-input" name="orderStatus"/>
                           <label className="form-check-label">Delivered</label>
                       </div>
                       <div className="form-check form-check-block">
-                          <input type="radio" className="form-check-input" name="orderStatus"/>
+                          <input type="checkbox" className="form-check-input" name="orderStatus"/>
                           <label className="form-check-label">Return</label>
                       </div>
                   </form>
@@ -944,13 +1106,13 @@ function OrderDetails() {
             <div className="modal-dialog">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h5 className="modal-title">Delivery Date Update</h5>
+                  <h5 className="modal-title">Delivery Date</h5>
                   <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div className="modal-body">
                   <form>
                       <div className="mb3">
-                        <label className='form-label'>Date</label>
+                        <label className='form-label'>Enter the Date for delivery</label>
                         <input type="date" className="form-control"/>
                       </div>
                   </form>
@@ -964,6 +1126,33 @@ function OrderDetails() {
             </div>
           </div>
           {/* <!-- Order Date Update Modal End --> */}
+
+          {/* <!-- Order trackCode Modal Start --> */}
+          <div className="modal modal-right fade" id="trackCode" tabindex="-1" role="dialog" aria-hidden="true">
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title">Track Code</h5>
+                  <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div className="modal-body">
+                  <form>
+                      <div className="mb3">
+                        <label className='form-label'>Enter Tracking Code</label>
+                        <input type="text" className="form-control"/>
+                      </div>
+                  </form>
+                </div>
+                <div className="modal-footer border-0">
+                  <a href="#" className="btn btn-icon btn-icon-end btn-primary" data-bs-dismiss="modal">
+                    <span>Submit</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <!-- Order Track code Modal End --> */}
+
           </div>
         </div>
       </main>

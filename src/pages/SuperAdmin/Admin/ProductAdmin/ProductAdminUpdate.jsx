@@ -133,7 +133,7 @@ function ProductAdminUpdate() {
           <div className="row">
             <div className="col-xl-8">
               <div className="mb-5">
-                <h2 className="small-title">Product Admin View</h2>
+                <h2 className="small-title">Edit Product Admin Details</h2>
                 <div className="card">
                   <div className="card-body">
                     <form>
@@ -151,11 +151,11 @@ function ProductAdminUpdate() {
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Username</label>
-                        <input type="text" name='username' className="form-control" value={editData.username} onChange={handleEditOnchange} />
+                        <input type="text" name='username' className="form-control" value={editData.username} onChange={handleEditOnchange} readOnly/>
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Password</label>
-                        <input type="text" name='password' className="form-control" value={editData.password} onChange={handleEditOnchange} />
+                        <input type="text" name='password' className="form-control" value="Henry@123" onChange={handleEditOnchange} readOnly/>
                       </div>
                     </form>
                   </div>
@@ -186,7 +186,7 @@ function ProductAdminUpdate() {
                   </div>
                 </div>
               </div>
-              <div className="mb-5">
+              {/* <div className="mb-5">
                 <h2 className="small-title">History</h2>
                 <div className="card">
                   <div className="card-body mb-n3">
@@ -212,7 +212,7 @@ function ProductAdminUpdate() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './login.css';
-import logo from './dilhak.png';
+import logo from './logo1-black.png';
 import axios from 'axios';
 
 

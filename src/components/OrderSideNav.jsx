@@ -20,8 +20,8 @@ function OrderSideNav() {
           {/* <!-- User Menu Start --> */}
           <div className="user-container d-flex">
             <Link to="#" className="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img className="profile" alt="profile" src="img/profile/profile-1.webp" />
-              <div className="name">Zayn Hartley</div>
+              <img className="profile" alt="profile" src="img/profile/profile-10.png" />
+              <div className="name">James</div>
             </Link>
             <div className="dropdown-menu dropdown-menu-end user-menu wide">
               <div className="row mb-3 ms-0 me-0">
@@ -31,7 +31,7 @@ function OrderSideNav() {
                 <div className="col-6 ps-1 pe-1">
                   <ul className="list-unstyled">
                     <li>
-                      <Link to="/orderadmin-view">User Info</Link>
+                      <Link to="/orderadmin-profileview">User Info</Link>
                     </li>
                     <li>
                       <Link to="#">Preferences</Link>

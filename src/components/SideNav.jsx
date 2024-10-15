@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../images/logo/logo1.png'
-import profile from '../images/profile/IMG_6430.JPEG'
+import profile from '../images/profile/profile-11.png'
 
 function SideNav() {
   return (
@@ -35,19 +35,19 @@ function SideNav() {
                   <table>
                     <tr>
                       <th className='text-primary'>Name:</th>
-                      <td className='ps-5'>sdvsdvsdv</td>
+                      <td className='ps-5'>Robert William</td>
                     </tr>
                     <tr>
                       <th className='text-primary'>Username:</th>
-                      <td className='ps-5'>sdvsdvsdv</td>
+                      <td className='ps-5'>robert</td>
                     </tr>
                     <tr>
                       <th className='text-primary'>Email:</th>
-                      <td className='ps-5'>sdvsdvs</td>
+                      <td className='ps-5'>robert@gmail.com</td>
                     </tr>
                     <tr>
                       <th className='text-primary'>Phone:</th>
-                      <td className='ps-5'>sdvsdvsvd</td>
+                      <td className='ps-5'>8934568732</td>
                     </tr>
                   </table>
 
@@ -57,7 +57,7 @@ function SideNav() {
                         <i className="fa-solid fa-gear pe-1"/>
                         <label style={{cursor:"pointer"}}>User Info</label>
                       </a>
-                      <a href="/login"  style={{display:'flex'}}>
+                      <a href="/"  style={{display:'flex'}}>
                         <i className="fa-solid fa-sign-out pe-1"/>
                         <label style={{cursor:"pointer"}}>Logout</label>
                       </a>

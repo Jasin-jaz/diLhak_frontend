@@ -109,9 +109,9 @@ function AddProduct() {
                 <div className="w-auto sw-md-40">
                   <a href="/products" className="muted-link pb-1 d-inline-block breadcrumb-back">
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
-                    <span className="text-small align-middle">Back</span>
+                    <span className="text-medium align-middle">Back</span>
                   </a>
-                  <h1 className="mb-0 pb-0 display-4" id="title">Add New Product</h1>
+                  <h1 className="mb-0 pb-0 display-6" id="title">Add New Product Variant</h1>
                 </div>
               </div>
               {/* <!-- Title End --> */}

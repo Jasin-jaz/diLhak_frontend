@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import profile from '../../../images/profile/profile-11.png'
 
 function SuperAdminProfileView() {
 
@@ -31,7 +32,7 @@ function SuperAdminProfileView() {
                 <div className="w-auto sw-md-40">
                   <a href="/admin-dashboard" className="muted-link pb-1 d-inline-block breadcrumb-back">
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
-                    <span className="text-small align-middle">Back</span>
+                    <span className="text-medium align-middle">Back</span>
                   </a>
                   <h1 className="mb-0 pb-0 display-4" id="title">My Account</h1>
                 </div>
@@ -69,7 +70,7 @@ function SuperAdminProfileView() {
                     <form>
                       <div className="mb-3">
                         <label className="form-label">Name</label>
-                        <input type="text" className="form-control" value={user.first_name} readOnly/>
+                        <input type="text" className="form-control" value="Robert William" readOnly/>
                       </div>
                       {/* <div className="mb-3 w-100">
                         <label className="form-label">Gender</label>
@@ -83,19 +84,19 @@ function SuperAdminProfileView() {
                       </div> */}
                       <div className="mb-3">
                         <label className="form-label">Mobile</label>
-                        <input type="tel" className="form-control" value={user.phone_number} readOnly/>
+                        <input type="tel" className="form-control" value="8934568732" readOnly/>
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Email</label>
-                        <input type="email" className="form-control" value={user.email} readOnly/>
+                        <input type="email" className="form-control" value="robert@gmail.com" readOnly/>
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Username</label>
-                        <input type="text" className="form-control" value={user.username} readOnly/>
+                        <input type="text" className="form-control" value="robert" readOnly/>
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Password</label>
-                        <input type="text" className="form-control" value={user.password} readOnly/>
+                        <input type="text" className="form-control" value="robert@123" readOnly/>
                       </div>
                     </form>
                   </div>
@@ -111,14 +112,14 @@ function SuperAdminProfileView() {
                 <div className="card">
                   <div className="card-body">
                     {/* <form> */}
-                      <div className="dropzone dropzone-columns row g-2 row-cols-1 row-cols-md-1 border-0 p-0" ><img src={`http://localhost:8000${user.image}`} alt="user"/></div>
+                      <div className="dropzone dropzone-columns row g-2 row-cols-1 row-cols-md-1 border-0 p-0" ><img src={profile} alt="user"/></div>
                     {/* </form> */}
                   </div>
                 </div>
               </div>
               {/* <!-- Image End --> */}
               {/* <!-- History Start --> */}
-              <div className="mb-5">
+              {/* <div className="mb-5">
                 <h2 className="small-title">History</h2>
                 <div className="card">
                   <div className="card-body mb-n3">
@@ -140,7 +141,7 @@ function SuperAdminProfileView() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/* <!-- History End --> */}
 
               {/* <!-- Gallery Start --> */}

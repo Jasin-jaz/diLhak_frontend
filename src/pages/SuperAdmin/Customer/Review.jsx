@@ -114,10 +114,10 @@ function Review() {
                   <div className="card-body pt-0 pb-0 sh-30 sh-lg-8">
                     <div className="row g-0 h-100 align-content-center">
                       <div className="col-11 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 h-lg-100 position-relative">
-                        <a href="/customerdetails" className="text-truncate h-100 d-flex align-items-center">John</a>
+                        <a href="/customerdetails" className="text-truncate h-100 d-flex align-items-center">Ivy Laurel</a>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0">
-                        <div className="text-alternate">Salwar</div>
+                        <div className="text-alternate">Heavy Georgette Plazzo Salwar</div>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0">
                         <div className="text-alternate">13-06-2024</div>
@@ -147,13 +147,13 @@ function Review() {
                   <div className="card-body pt-0 pb-0 sh-30 sh-lg-8">
                     <div className="row g-0 h-100 align-content-center">
                       <div className="col-11 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 h-lg-100 position-relative">
-                        <a href="/customerdetails" className="text-truncate h-100 d-flex align-items-center">David</a>
+                        <a href="/customerdetails" className="text-truncate h-100 d-flex align-items-center">Cerena Taylor</a>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0">
-                        <div className="text-alternate">Salwar</div>
+                        <div className="text-alternate">Poly Wrinkle Georgette Pant And Top</div>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0">
-                        <div className="text-alternate">13-06-2024</div>
+                        <div className="text-alternate">14-06-2024</div>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0">
                         <div className="text-alternate">Replied</div>
@@ -180,13 +180,13 @@ function Review() {
                   <div className="card-body pt-0 pb-0 sh-30 sh-lg-8">
                     <div className="row g-0 h-100 align-content-center">
                       <div className="col-11 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 h-lg-100 position-relative">
-                        <a href="/customerdetails" className="text-truncate h-100 d-flex align-items-center">Robert</a>
+                        <a href="/customerdetails" className="text-truncate h-100 d-flex align-items-center">Rose William</a>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0">
-                        <div className="text-alternate">Salwar</div>
+                        <div className="text-alternate">Frock Kurti</div>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0">
-                        <div className="text-alternate">13-06-2024</div>
+                        <div className="text-alternate">15-06-2024</div>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0">
                         <div className="text-alternate">Replied</div>
@@ -213,13 +213,13 @@ function Review() {
                   <div className="card-body pt-0 pb-0 sh-30 sh-lg-8">
                     <div className="row g-0 h-100 align-content-center">
                       <div className="col-11 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 h-lg-100 position-relative">
-                        <a href="/customerdetails" className="text-truncate h-100 d-flex align-items-center">Alex</a>
+                        <a href="/customerdetails" className="text-truncate h-100 d-flex align-items-center">Alexa Jackson</a>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0">
-                        <div className="text-alternate">Salwar</div>
+                        <div className="text-alternate">Woven Design Zari Silk Blend Banarasi Sareer</div>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0">
-                        <div className="text-alternate">13-06-2024</div>
+                        <div className="text-alternate">15-06-2024</div>
                       </div>
                       <div className="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0">
                         <div className="text-alternate">Pending</div>
@@ -260,16 +260,16 @@ function Review() {
                     <div className="row">
                       <div className="mb-3 col-md-6">
                         <label className="form-label text-primary font-weight-bold">User</label>
-                        <input type="text" className="form-control" id="replyText" value="Vaishnav"/>
+                        <input type="text" className="form-control" id="replyText" value="Ivy Laurel"/>
                       </div>
                       <div className="mb-3 col-md-6">
                         <label className="form-label text-primary font-weight-bold">Product</label>
-                        <input type="text" className="form-control" id="replyText" value="Plazzo Salwar"/>
+                        <input type="text" className="form-control" id="replyText" value="Heavy Georgette Plazzo Salwar"/>
                       </div>
                     </div>
                     <div className="mb-3">
                       <label htmlFor="replyTextarea" className="form-label text-primary font-weight-bold">Review</label>
-                      <textarea className="form-control" id="replyTextarea" rows="3" value="Excellent product"></textarea>
+                      <textarea className="form-control" id="replyTextarea" rows="3" value="The cloth is soft and skin friendly. The stitching is good n sturdy, no loose threads. Love it! Go for it! 👍🏻"></textarea>
                     </div>
                     <div className="mb-3">
                       <label htmlFor="replyTextarea" className="form-label text-primary font-weight-bold">Reply</label>

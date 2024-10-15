@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../images/logo/logo1.png'
-import profile from '../images/profile/profile-1.webp'
+import profile from '../images/profile/profile-7.png'
 
 function ProductSideNav() {
   return (
@@ -53,7 +53,7 @@ function ProductSideNav() {
 
                   <ul className="list-unstyled mt-4">
                     <li >
-                      <a href="/superadminprofile-view/"  style={{display:'flex'}}>
+                      <a href="/productadminprofile-view/"  style={{display:'flex'}}>
                         <i className="fa-solid fa-gear pe-1"/>
                         <label style={{cursor:"pointer"}}>User Info</label>
                       </a>
@@ -147,13 +147,13 @@ function ProductSideNav() {
               <li>
                   <Link to="/productadmin-subcategory">
                   <i className="fa-solid fa-list icon" data-acorn-size="18"></i>
-                  <span className="label">Sub Category</span>
+                  <span className="label">Product</span>
                   </Link>
               </li>
               <li>
                   <Link to="/productadmin-products">
                   <i className="fa-solid fa-shirt icon" data-acorn-size="18"></i>
-                  <span className="label">Product</span>
+                  <span className="label">Product Variant</span>
                   </Link>
               </li>
               <li>

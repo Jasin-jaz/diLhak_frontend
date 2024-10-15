@@ -95,7 +95,7 @@ function ProductAdminView() {
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Password</label>
-                        <input type="text" className="form-control" value={user.password} readOnly/>
+                        <input type="text" className="form-control" value="Henry@123" readOnly/>
                       </div>
                     </form>
                   </div>
@@ -118,7 +118,7 @@ function ProductAdminView() {
               </div>
               {/* <!-- Image End --> */}
               {/* <!-- History Start --> */}
-              <div className="mb-5">
+              {/* <div className="mb-5">
                 <h2 className="small-title">History</h2>
                 <div className="card">
                   <div className="card-body mb-n3">
@@ -144,7 +144,7 @@ function ProductAdminView() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/* <!-- History End --> */}
 
               {/* <!-- Gallery Start --> */}

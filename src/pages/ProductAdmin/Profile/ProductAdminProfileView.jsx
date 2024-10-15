@@ -1,4 +1,5 @@
 import React from 'react'
+import profile from '../../../images/profile/profile-7.png'
 
 function ProductAdminProfileView() {
   return (
@@ -13,7 +14,7 @@ function ProductAdminProfileView() {
                 <div className="w-auto sw-md-40">
                   <a href="/productadmin-dashboard" className="muted-link pb-1 d-inline-block breadcrumb-back">
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
-                    <span className="text-small align-middle">Home</span>
+                    <span className="text-medium align-middle">Home</span>
                   </a>
                   <h1 className="mb-0 pb-0 display-4" id="title">My Account</h1>
                 </div>
@@ -51,9 +52,9 @@ function ProductAdminProfileView() {
                     <form>
                       <div className="mb-3">
                         <label className="form-label">Name</label>
-                        <input type="text" className="form-control" value="Vyshanv" readOnly/>
+                        <input type="text" className="form-control" value="Henry" readOnly/>
                       </div>
-                      <div className="mb-3 w-100">
+                      {/* <div className="mb-3 w-100">
                         <label className="form-label">Gender</label>
                         <input type="text" className="form-control" value="Male" readOnly/>
                       </div>
@@ -62,18 +63,22 @@ function ProductAdminProfileView() {
                         <textarea className="form-control html-editor-bubble html-editor sh-13" id="quillEditorBubble" readOnly style={{overflowY: 'scroll',padding:'10px 10px' }} value="Kannur, Kerala, 670014">
                           Kannur, Kerala, 670014, India
                         </textarea>
-                      </div>
+                      </div> */}
                       <div className="mb-3">
                         <label className="form-label">Mobile</label>
-                        <input type="tel" className="form-control" value="+91 9455332676" readOnly/>
+                        <input type="tel" className="form-control" value="7654878901" readOnly/>
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Email</label>
-                        <input type="email" className="form-control" value="Vyshnav@gmail.com" readOnly/>
+                        <input type="email" className="form-control" value="Henry@gmail.com" readOnly/>
                       </div>
                       <div className="mb-3">
-                        <label className="form-label">Email</label>
-                        <input type="text" className="form-control" value="Vyshnav@123" readOnly/>
+                        <label className="form-label">Username</label>
+                        <input type="text" className="form-control" value="henry" readOnly/>
+                      </div>
+                      <div className="mb-3">
+                        <label className="form-label">Password</label>
+                        <input type="text" className="form-control" value="Henry@123" readOnly/>
                       </div>
                     </form>
                   </div>
@@ -88,15 +93,15 @@ function ProductAdminProfileView() {
                 <h2 className="small-title">Image</h2>
                 <div className="card">
                   <div className="card-body">
-                    <form>
-                      <div className="dropzone dropzone-columns row g-2 row-cols-1 row-cols-md-1 border-0 p-0" id="dropzoneProductImage"></div>
-                    </form>
+                    {/* <form> */}
+                      <div className="dropzone dropzone-columns row g-2 row-cols-1 row-cols-md-1 border-0 p-0" ><img src={profile} alt="user"/></div>
+                    {/* </form> */}
                   </div>
                 </div>
               </div>
               {/* <!-- Image End --> */}
               {/* <!-- History Start --> */}
-              <div className="mb-5">
+              {/* <div className="mb-5">
                 <h2 className="small-title">History</h2>
                 <div className="card">
                   <div className="card-body mb-n3">
@@ -118,7 +123,7 @@ function ProductAdminProfileView() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/* <!-- History End --> */}
 
               {/* <!-- Gallery Start --> */}
